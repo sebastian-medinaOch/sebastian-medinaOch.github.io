@@ -1,0 +1,141 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  background: radial-gradient(circle at top, #4B0082, #000000 70%);
+  color: #F5F5F5;
+}
+
+.hero-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #02F6FA;
+  box-shadow: 0 0 30px rgba(2, 246, 250, 0.6);
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #02F6FA;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.hero-text {
+  max-width: 600px;
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.hero-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #02F6FA;
+  color: #000;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #02F6FA;
+  color: #02F6FA;
+}
+
+/* ===== Header ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #02F6FA;
+  text-shadow: 0 0 10px #02F6FA;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+}
+
+.nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #02F6FA;
+  text-shadow: 0 0 10px #02F6FA;
+}
+
+/* ===== Burger Menu ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #f5f5f5;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.9);
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .burger {
+    display: flex;
+  }
+}
+
