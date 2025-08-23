@@ -6,7 +6,7 @@
   "homepage": "https://sebastian-medinaOch.github.io",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --outDir docs",
     "lint": "eslint .",
     "predeploy": "npm run build",
     "preview": "vite preview",
