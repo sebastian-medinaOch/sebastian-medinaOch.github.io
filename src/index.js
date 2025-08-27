@@ -20,6 +20,7 @@ import React from "react";
 import { createRoot} from "react-dom/client";
 import { HashRouter } from "react-router-dom";
 import App from "App";
+import "./styles/brand.css";
 
 // Vision UI Dashboard React Context Provider
 import { VisionUIControllerProvider } from "context";
