@@ -28,7 +28,7 @@ export default {
   },
 
   sidenav: {
-    button: "#1a1f37",
+    button: "#000000ff",
   },
 
   text: {
@@ -46,7 +46,7 @@ export default {
   },
 
   brand: {
-    main: "#0075ff",
+    main: "#ffffffff",
     focus: "#0075ff",
   },
 
@@ -57,7 +57,7 @@ export default {
   },
 
   primary: {
-    main: "#4318ff",
+    main: "#ffffffff",
     focus: "#9f7aea",
   },
 
@@ -180,8 +180,8 @@ export default {
 
     card: {
       deg: "127.09",
-      main: "rgba(6, 11, 40, 0.94) 19.41%",
-      state: "rgba(10, 14, 35, 0.49) 76.65%",
+      main: "#000000 19.41%",
+      state: "#000000 76.65%",
     },
 
     menu: {

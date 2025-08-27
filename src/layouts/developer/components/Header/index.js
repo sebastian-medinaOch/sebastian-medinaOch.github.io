@@ -31,9 +31,9 @@ import VuiAvatar from "components/VuiAvatar";
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 // Vision UI Dashboard React icons
-import { IoCube } from "react-icons/io5";
-import { IoDocument } from "react-icons/io5";
-import { IoBuild } from "react-icons/io5";
+import { IoDesktop } from "react-icons/io5";
+import { IoManSharp } from "react-icons/io5";
+import { IoMailUnreadSharp } from "react-icons/io5";
 // Vision UI Dashboard React example components
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { useEffect, useState } from "react";
@@ -142,9 +142,9 @@ function Header() {
                 onChange={handleSetTabValue}
                 sx={{ background: "transparent", display: "flex", justifyContent: "flex-end" }}
               >
-                <Tab label="OVERVIEW" icon={<IoCube color="white" size="16px" />} />
-                <Tab label="TEAMS" icon={<IoDocument color="white" size="16px" />} />
-                <Tab label="PROJECTS" icon={<IoBuild color="white" size="16px" />} />
+                <Tab label="BLOG" icon={<IoDesktop color="white" size="16px" />} />
+                <Tab label="CONÓCEME" icon={<IoManSharp color="white" size="16px" />} />
+                <Tab label="EMAIL" icon={<IoMailUnreadSharp color="white" size="16px" />} />
               </Tabs>
             </AppBar>
           </Grid>
