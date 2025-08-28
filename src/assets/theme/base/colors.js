@@ -29,11 +29,12 @@ export default {
 
   sidenav: {
     button: "#000000ff",
+    focus: "#ff6b35", // Color cuando se presiona botón del menú
   },
 
   text: {
     main: "#a0aec0",
-    focus: "#ffffff",
+    focus: "#ff6b35", // Color naranja cuando se presiona
   },
 
   transparent: {
@@ -96,8 +97,8 @@ export default {
 
   // Other colors
   info: {
-    main: "#0075ff",
-    focus: "#3993fe",
+    main: "#238680",
+    focus: "#ff6b35", // Color naranja cuando se presiona
     charts: {
       100: "#2d8cfc",
       200: "#2370cc",

@@ -43,7 +43,7 @@ import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import Header from "layouts/developer/components/Header";
 import PlatformSettings from "layouts/developer/components/PlatformSettings";
 import Welcome from "../developer/components/Welcome/index";
-import CarInformations from "./components/CarInformations";
+import Projects from "./components/Projects";
 
 function Overview() {
   return (
@@ -84,7 +84,7 @@ function Overview() {
               },
             })}
           >
-            <CarInformations />
+            <Projects />
           </Grid>
           <Grid
             item

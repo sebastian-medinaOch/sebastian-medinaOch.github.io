@@ -79,6 +79,7 @@ import buttonBase from "assets/theme/components/buttonBase";
 import icon from "assets/theme/components/icon";
 import svgIcon from "assets/theme/components/svgIcon";
 import link from "assets/theme/components/link";
+import pagination from "assets/theme/components/pagination";
 
 export default createTheme({
   breakpoints: { ...breakpoints },
@@ -146,5 +147,6 @@ export default createTheme({
     MuiIcon: { ...icon },
     MuiSvgIcon: { ...svgIcon },
     MuiLink: { ...link },
+    MuiPagination: { ...pagination },
   },
 });
