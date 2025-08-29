@@ -97,5 +97,29 @@ export default {
         marginRight: 0,
       },
     },
+
+    // Custom filter styles
+    "&.filter-input": {
+      "& .MuiOutlinedInput-root": {
+        color: white.main,
+        backgroundColor: "rgba(255, 255, 255, 0.15) !important",
+        "& fieldset": {
+          borderColor: "#238680 !important",
+        },
+        "&:hover fieldset": {
+          borderColor: "#2dd4bf !important",
+        },
+        "&.Mui-focused fieldset": {
+          borderColor: "#2dd4bf !important",
+        },
+      },
+      "& .MuiInputLabel-root": {
+        color: white.main,
+      },
+      "& .MuiChip-root": {
+        backgroundColor: "#238680",
+        color: white.main,
+      },
+    },
   },
 };

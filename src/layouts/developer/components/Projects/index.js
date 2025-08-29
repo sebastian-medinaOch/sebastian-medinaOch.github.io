@@ -36,6 +36,16 @@ import Table from "examples/Tables/Table";
 // Data
 import data from "layouts/developer/components/Projects/data";
 
+// Styles
+import {
+  projectsCard,
+  filtersContainer,
+  skillFilterInput,
+  levelFilterInput,
+  tableContainer,
+  paginationContainer
+} from "layouts/developer/components/Projects/styles";
+
 function Projects() {
   // ===== DATA & STATE =====
   const { columns, rows } = data();
@@ -107,13 +117,7 @@ function Projects() {
   const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
   const paginatedRows = filteredRows.slice((page - 1) * rowsPerPage, page * rowsPerPage);
   return (
-    <Card
-      sx={{
-        height: "500px",
-        display: "flex",
-        flexDirection: "column",
-      }}
-    >
+    <Card sx={projectsCard}>
       {/* ===== HEADER & FILTERS ===== */}
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
@@ -121,12 +125,13 @@ function Projects() {
             Habilidades - Tecnológicas
           </VuiTypography>
         </VuiBox>
-        <VuiBox display="flex" gap={2}>
+        <VuiBox sx={filtersContainer}>
           {/* Filtro por Habilidad */}
           <Autocomplete
             multiple
             limitTags={1}
             id="skill-name-filter"
+            className="filter-input"
             options={skillNames}
             getOptionLabel={(option) => option.label}
             value={selectedSkills}
@@ -135,36 +140,16 @@ function Projects() {
               <TextField 
                 {...params} 
                 placeholder="Filtrar por habilidad"
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    color: "white",
-                    backgroundColor: "#69fff8 !important",
-                    "& fieldset": {
-                      borderColor: "#69fff8",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "#238680",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "#238680",
-                    },
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "white",
-                  },
-                  "& .MuiChip-root": {
-                    backgroundColor: "#238680",
-                  },
-                }}
               />
             )}
-            sx={{ width: '250px' }}
+            sx={skillFilterInput}
           />
           {/* Filtro por Nivel */}
           <Autocomplete
             multiple
             limitTags={1}
             id="skill-level-filter"
+            className="filter-input"
             options={skillLevels}
             getOptionLabel={(option) => option.label}
             value={selectedLevels}
@@ -173,54 +158,19 @@ function Projects() {
               <TextField 
                 {...params} 
                 placeholder="Filtrar por nivel"
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    color: "white",
-                     backgroundColor: "#69fff8 !important",
-                    "& fieldset": {
-                      borderColor: "#238680",
-                    },
-                    "&:hover fieldset": {
-                      borderColor: "#238680",
-                    },
-                    "&.Mui-focused fieldset": {
-                      borderColor: "#238680",
-                    },
-                  },
-                  "& .MuiInputLabel-root": {
-                    color: "white",
-                  },
-                  "& .MuiChip-root": {
-                    backgroundColor: "#238680",
-                  },
-                }}
               />
             )}
-            sx={{ width: '200px' }}
+            sx={levelFilterInput}
           />
         </VuiBox>
       </VuiBox>
       {/* ===== TABLE ===== */}
-      <VuiBox
-        sx={{
-          flex: 1,
-          "& th": {
-            borderBottom: ({ borders: { borderWidth }, palette: { grey } }) =>
-              `${borderWidth[1]} solid ${grey[700]}`,
-          },
-          "& .MuiTableRow-root:not(:last-child)": {
-            "& td": {
-              borderBottom: ({ borders: { borderWidth }, palette: { grey } }) =>
-                `${borderWidth[1]} solid ${grey[700]}`,
-            },
-          },
-        }}
-      >
+      <VuiBox sx={tableContainer}>
         <Table columns={columns} rows={paginatedRows} />
       </VuiBox>
       
       {/* ===== PAGINATION ===== */}
-      <VuiBox display="flex" justifyContent="center" mt="auto" py={2}>
+      <VuiBox sx={paginationContainer}>
         <Stack spacing={2}>
           <Pagination 
             count={totalPages} 
