@@ -23,6 +23,8 @@ import { useState } from "react";
 import Card from "@mui/material/Card";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import Autocomplete from "@mui/material/Autocomplete";
+import TextField from "@mui/material/TextField";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -35,16 +37,75 @@ import Table from "examples/Tables/Table";
 import data from "layouts/developer/components/Projects/data";
 
 function Projects() {
+  // ===== DATA & STATE =====
   const { columns, rows } = data();
   const [page, setPage] = useState(1);
+  const [selectedLevels, setSelectedLevels] = useState([]);
+  const [selectedSkills, setSelectedSkills] = useState([]);
   const rowsPerPage = 5;
 
+  // ===== FILTER OPTIONS =====
+  const skillLevels = [
+    { label: "Experto", value: "Experto" },
+    { label: "Avanzado", value: "Avanzado" },
+    { label: "Intermedio", value: "Intermedio" },
+    { label: "Básico", value: "Básico" },
+    { label: "Principiante", value: "Principiante" }
+  ];
+
+  const skillNames = rows.map(row => {
+    const skillName = row.tecnologias.props.children[1].props.children;
+    return { label: skillName, value: skillName };
+  }).sort((a, b) => a.label.localeCompare(b.label));
+
+  // ===== HELPER FUNCTIONS =====
+  const getSkillLevelText = (stars) => {
+    if (stars >= 4.5) return "Experto";
+    if (stars >= 3.5) return "Avanzado";
+    if (stars >= 2.5) return "Intermedio";
+    if (stars >= 1.5) return "Básico";
+    return "Principiante";
+  };
+
+  const getSkillName = (row) => {
+    return row.tecnologias.props.children[1].props.children;
+  };
+
+  const getSkillLevel = (row) => {
+    const percentage = row.nivel.props.children[0].props.value * 20;
+    const stars = (percentage / 100) * 5;
+    return getSkillLevelText(stars);
+  };
+
+  // ===== EVENT HANDLERS =====
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
 
-  const totalPages = Math.ceil(rows.length / rowsPerPage);
-  const paginatedRows = rows.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+  const handleLevelFilterChange = (event, newValue) => {
+    setSelectedLevels(newValue);
+    setPage(1);
+  };
+
+  const handleSkillFilterChange = (event, newValue) => {
+    setSelectedSkills(newValue);
+    setPage(1);
+  };
+
+  // ===== FILTERING LOGIC =====
+  const filteredRows = rows.filter(row => {
+    const matchesLevel = selectedLevels.length === 0 || 
+      selectedLevels.some(selected => selected.value === getSkillLevel(row));
+    
+    const matchesSkill = selectedSkills.length === 0 || 
+      selectedSkills.some(selected => selected.value === getSkillName(row));
+    
+    return matchesLevel && matchesSkill;
+  });
+
+  // ===== PAGINATION =====
+  const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
+  const paginatedRows = filteredRows.slice((page - 1) * rowsPerPage, page * rowsPerPage);
   return (
     <Card
       sx={{
@@ -53,13 +114,93 @@ function Projects() {
         flexDirection: "column",
       }}
     >
+      {/* ===== HEADER & FILTERS ===== */}
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
           <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
-            Habilidades -  Tecnologicas
+            Habilidades - Tecnológicas
           </VuiTypography>
         </VuiBox>
+        <VuiBox display="flex" gap={2}>
+          {/* Filtro por Habilidad */}
+          <Autocomplete
+            multiple
+            limitTags={1}
+            id="skill-name-filter"
+            options={skillNames}
+            getOptionLabel={(option) => option.label}
+            value={selectedSkills}
+            onChange={handleSkillFilterChange}
+            renderInput={(params) => (
+              <TextField 
+                {...params} 
+                placeholder="Filtrar por habilidad"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    color: "white",
+                    backgroundColor: "#69fff8 !important",
+                    "& fieldset": {
+                      borderColor: "#69fff8",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#238680",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#238680",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white",
+                  },
+                  "& .MuiChip-root": {
+                    backgroundColor: "#238680",
+                  },
+                }}
+              />
+            )}
+            sx={{ width: '250px' }}
+          />
+          {/* Filtro por Nivel */}
+          <Autocomplete
+            multiple
+            limitTags={1}
+            id="skill-level-filter"
+            options={skillLevels}
+            getOptionLabel={(option) => option.label}
+            value={selectedLevels}
+            onChange={handleLevelFilterChange}
+            renderInput={(params) => (
+              <TextField 
+                {...params} 
+                placeholder="Filtrar por nivel"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    color: "white",
+                     backgroundColor: "#69fff8 !important",
+                    "& fieldset": {
+                      borderColor: "#238680",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#238680",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "#238680",
+                    },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "white",
+                  },
+                  "& .MuiChip-root": {
+                    backgroundColor: "#238680",
+                  },
+                }}
+              />
+            )}
+            sx={{ width: '200px' }}
+          />
+        </VuiBox>
       </VuiBox>
+      {/* ===== TABLE ===== */}
       <VuiBox
         sx={{
           flex: 1,
@@ -77,6 +218,8 @@ function Projects() {
       >
         <Table columns={columns} rows={paginatedRows} />
       </VuiBox>
+      
+      {/* ===== PAGINATION ===== */}
       <VuiBox display="flex" justifyContent="center" mt="auto" py={2}>
         <Stack spacing={2}>
           <Pagination 
