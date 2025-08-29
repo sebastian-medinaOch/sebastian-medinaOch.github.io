@@ -56,7 +56,7 @@ function Projects() {
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
           <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
-            Habilidades
+            Habilidades -  Tecnologicas
           </VuiTypography>
         </VuiBox>
       </VuiBox>

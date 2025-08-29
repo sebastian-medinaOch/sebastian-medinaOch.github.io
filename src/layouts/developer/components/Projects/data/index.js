@@ -11,6 +11,31 @@ import SpringBoot from "examples/Icons/SpringBoot";
 import AWS from "examples/Icons/AWS";
 import Docker from "examples/Icons/Docker";
 import Kubernetes from "examples/Icons/Kubernetes";
+import Microservicios from "examples/Icons/Microservicios";
+import Hexagonal from "examples/Icons/Hexagonal";
+import JavaScript from "examples/Icons/JavaScript";
+import Git from "examples/Icons/Git";
+import APIs from "examples/Icons/APIs";
+import SQS from "examples/Icons/SQS";
+import SNS from "examples/Icons/SNS";
+import RabbitMQ from "examples/Icons/RabbitMQ";
+import AzureCloud from "examples/Icons/AzureCloud";
+import WebFlux from "examples/Icons/WebFlux";
+import SonarQube from "examples/Icons/SonarQube";
+import CopilotIA from "examples/Icons/CopilotIA";
+import MongoDB from "examples/Icons/MongoDB";
+import PostgreSQL from "examples/Icons/PostgreSQL";
+import Elastic from "examples/Icons/Elastic";
+import Dynatrace from "examples/Icons/Dynatrace";
+import Lambdas from "examples/Icons/Lambdas";
+import NodeJS from "examples/Icons/NodeJS";
+import Gradle from "examples/Icons/Gradle";
+import Maven from "examples/Icons/Maven";
+import React from "examples/Icons/React";
+import SpringFramework from "examples/Icons/SpringFramework";
+import Hibernate from "examples/Icons/Hibernate";
+import JUnit from "examples/Icons/JUnit";
+import Swagger from "examples/Icons/Swagger";
 import TechIcon from "examples/Icons/TechIcon";
 import Pipeline from "examples/Icons/Pipeline";
 import SqlIcon from "examples/Icons/SqlIcon";
@@ -213,7 +238,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#FF6B6B" />
+            <Microservicios size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Microservicios
             </VuiTypography>
@@ -236,7 +261,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#4ECDC4" />
+            <Hexagonal size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Arquitectura Hexagonal
             </VuiTypography>
@@ -259,7 +284,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#F7DF1E" />
+            <JavaScript size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               JavaScript
             </VuiTypography>
@@ -282,7 +307,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#F05032" />
+            <Git size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Git
             </VuiTypography>
@@ -305,7 +330,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#61DAFB" />
+            <APIs size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               APIs
             </VuiTypography>
@@ -328,7 +353,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#FF9900" />
+            <SQS size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               SQS
             </VuiTypography>
@@ -351,7 +376,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#FF9900" />
+            <SNS size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               SNS
             </VuiTypography>
@@ -374,7 +399,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#FF6600" />
+            <RabbitMQ size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               RabbitMQ
             </VuiTypography>
@@ -397,7 +422,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#0078D4" />
+            <AzureCloud size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Azure Cloud
             </VuiTypography>
@@ -420,7 +445,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#6DB33F" />
+            <WebFlux size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               WebFlux
             </VuiTypography>
@@ -443,7 +468,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#CB3837" />
+            <SonarQube size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               SonarQube
             </VuiTypography>
@@ -535,7 +560,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#24292E" />
+            <CopilotIA size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Copilot IA
             </VuiTypography>
@@ -558,7 +583,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#47A248" />
+            <MongoDB size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               MongoDB
             </VuiTypography>
@@ -581,7 +606,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#336791" />
+            <PostgreSQL size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               PostgreSQL
             </VuiTypography>
@@ -604,7 +629,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#005571" />
+            <Elastic size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Elastic
             </VuiTypography>
@@ -627,7 +652,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#4F2EE8" />
+            <Dynatrace size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Dynatrace
             </VuiTypography>
@@ -650,7 +675,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#0078D4" />
+            <AzureCloud size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Key Vault Azure
             </VuiTypography>
@@ -673,7 +698,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#FF9900" />
+            <Lambdas size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Lambdas
             </VuiTypography>
@@ -696,7 +721,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#339933" />
+            <NodeJS size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               NodeJS
             </VuiTypography>
@@ -719,7 +744,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#02303A" />
+            <Gradle size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Gradle
             </VuiTypography>
@@ -742,7 +767,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#C71A36" />
+            <Maven size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Maven
             </VuiTypography>
@@ -765,7 +790,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#61DAFB" />
+            <React size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               React
             </VuiTypography>
@@ -788,7 +813,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#6DB33F" />
+            <SpringFramework size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Spring Framework
             </VuiTypography>
@@ -811,7 +836,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#59666C" />
+            <Hibernate size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Hibernate
             </VuiTypography>
@@ -834,7 +859,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#25A162" />
+            <TechIcon size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               Mockito
             </VuiTypography>
@@ -857,7 +882,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#25A162" />
+            <JUnit size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               JUnit
             </VuiTypography>
@@ -880,7 +905,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <TechIcon size="20px" color="#85EA2D" />
+            <Swagger size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               OpenAPI Swagger
             </VuiTypography>

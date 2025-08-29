@@ -23,7 +23,7 @@ const Swagger = forwardRef(({ color, size, ...rest }, ref) => (
   </VuiBox>
 ));
 
-Docker.defaultProps = {
+Swagger.defaultProps = {
   color: "#2496ED",
   size: "16px",
 };
