@@ -1,4 +1,5 @@
 // @mui material components
+import Rating from "@mui/material/Rating";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -42,6 +43,19 @@ import SqlIcon from "examples/Icons/SqlIcon";
 import NoSQL from "examples/Icons/NoSQL";
 
 export default function data() {
+  // Función para convertir porcentaje a estrellas (0-5)
+  const getStarsFromPercentage = (percentage) => {
+    return (percentage / 100) * 5;
+  };
+
+  // Función para obtener el texto del nivel de habilidad
+  const getSkillLevelText = (stars) => {
+    if (stars >= 4.5) return "Experto";
+    if (stars >= 3.5) return "Avanzado";
+    if (stars >= 2.5) return "Intermedio";
+    if (stars >= 1.5) return "Básico";
+    return "Principiante";
+  };
 
   return {
     columns: [
@@ -66,11 +80,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              100%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={100} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -89,11 +115,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              100%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={100} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -112,11 +150,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -135,11 +185,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -158,11 +220,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -181,11 +255,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -204,11 +290,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -227,11 +325,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -250,11 +360,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -273,11 +395,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -296,11 +430,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              40%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(40)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(40))}
             </VuiTypography>
-            <VuiProgress value={40} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -319,11 +465,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -342,11 +500,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -365,11 +535,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -388,11 +570,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -411,11 +605,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -434,11 +640,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(70)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(70))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -457,11 +675,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(70)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(70))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -480,11 +710,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -503,11 +745,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(70)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(70))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -526,11 +780,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -549,11 +815,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(85)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(85))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -572,11 +850,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(85)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(85))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -595,11 +885,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -618,11 +920,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -641,11 +955,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -664,11 +990,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(70)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(70))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -687,11 +1025,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              70%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={70} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -710,11 +1060,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(70)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(70))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -733,11 +1095,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              60%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(60)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(60))}
             </VuiTypography>
-            <VuiProgress value={60} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -756,11 +1130,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(85)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(85))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -779,11 +1165,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(85)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(85))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -802,11 +1200,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              50%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(40)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(40))}
             </VuiTypography>
-            <VuiProgress value={50} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -825,11 +1235,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              80%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={80} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -848,11 +1270,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              70%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(75)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(75))}
             </VuiTypography>
-            <VuiProgress value={70} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -871,11 +1305,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              100%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={100} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -894,11 +1340,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              100%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(100)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(100))}
             </VuiTypography>
-            <VuiProgress value={100} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       },
@@ -917,11 +1375,23 @@ export default function data() {
           </VuiTypography>
         ),
         nivel: (
-          <VuiBox width="8rem" textAlign="left">
-            <VuiTypography color="white" variant="button" fontWeight="bold">
-              90%
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
             </VuiTypography>
-            <VuiProgress value={90} color="info" label={false} sx={{ background: "#2D2E5F" }} />
           </VuiBox>
         ),
       }

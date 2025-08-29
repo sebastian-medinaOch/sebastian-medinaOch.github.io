@@ -97,7 +97,7 @@ export default {
 
   // Other colors
   info: {
-    main: "#238680",
+    main: "#238680", //Color principal de la paleta
     focus: "#ff6b35", // Color naranja cuando se presiona
     charts: {
       100: "#2d8cfc",
