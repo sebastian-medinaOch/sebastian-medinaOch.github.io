@@ -18,9 +18,9 @@
 
 // @mui material components
 // @mui icons
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import team1 from "assets/images/avatar1.png";
@@ -44,6 +44,7 @@ import Header from "layouts/developer/components/Header";
 import PlatformSettings from "layouts/developer/components/PlatformSettings";
 import Welcome from "../developer/components/Welcome/index";
 import Projects from "./components/Projects";
+
 
 function Overview() {
   return (
@@ -98,27 +99,27 @@ function Overview() {
             })}
           >
             <ProfileInfoCard
-              title="profile information"
-              description="Hi, I’m Mark Johnson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
+              title="Información personal"
+              description="Especialista en Java + arquitectura hexagonal para diseñar e implementar microservicios escalables en cloud (AWS/Azure), con pipelines CI/CD, contenedores y control de calidad continuo. Enfoque práctico, métricas y entrega confiable; ampliando alcance a full-stack con React, flutter, etc."
               info={{
-                fullName: "Mark Johnson",
-                mobile: "(44) 123 1234 123",
-                email: "mark@simmmple.com",
-                location: "United States",
+                nombre: "Sebastian Medina Ochoa",
+                telefono: "(34) 634 602 566",
+                correo: "sebasthyy1@gmail.com",
+                ubicacion: "Malaga, España",
               }}
               social={[
                 {
-                  link: "https://www.facebook.com/CreativeTim/",
-                  icon: <FacebookIcon />,
-                  color: "facebook",
+                  link: "https://www.linkedin.com/in/sebastian-medina-ochoa-3b69001aa/",
+                  icon: <LinkedInIcon />,
+                  color: "linkedin",
                 },
                 {
-                  link: "https://twitter.com/creativetim",
-                  icon: <TwitterIcon />,
-                  color: "twitter",
+                  link: "https://github.com/sebastian-medinaOch",
+                  icon: <GitHubIcon />,
+                  color: "github",
                 },
                 {
-                  link: "https://www.instagram.com/creativetimofficial/",
+                  link: "https://www.instagram.com/sebastianmedinaoc/",
                   icon: <InstagramIcon />,
                   color: "instagram",
                 },

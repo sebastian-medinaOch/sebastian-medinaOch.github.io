@@ -18,7 +18,7 @@
 
 import React from "react";
 import { Card, Icon } from "@mui/material";
-import welcome from "assets/images/foto-perfil-v3.png";
+import welcome from "assets/images/foto-perfil-ia-v2-negro.png";
 import VuiTypography from "components/VuiTypography/index";
 import VuiBox from "components/VuiBox/index";
 

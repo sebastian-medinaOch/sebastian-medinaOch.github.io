@@ -29,9 +29,9 @@ const filtersContainer = {
 };
 
 const skillFilterInput = {
-  width: '250px',
+  width: '180px',
   "& .MuiOutlinedInput-root": {
-    backgroundColor: "#3dc4ba !important",
+    backgroundColor: "#ffffffff !important",
     color: "white !important",
     "& fieldset": {
       borderColor: "#238680 !important",
@@ -53,9 +53,9 @@ const skillFilterInput = {
 };
 
 const levelFilterInput = {
-  width: '200px',
+  width: '180px',
   "& .MuiOutlinedInput-root": {
-    backgroundColor: "#3dc4ba !important",
+    backgroundColor: "#fbfbfbff !important",
     color: "white !important",
     "& fieldset": {
       borderColor: "#238680 !important",
