@@ -42,7 +42,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           border: `${borderWidth[2]} solid ${rgba(dark.focus, 0.5)}`,
           cursor: "pointer",
           position: "relative",
-          ml: -1.25,
+          ml: 0.05,
 
           "&:hover, &:focus": {
             zIndex: "10",
@@ -67,6 +67,9 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
         mb="8px"
         borderRadius="15px"
         sx={({ breakpoints }) => ({
+          width: "100%",
+          objectFit: "contain",
+          backgroundColor: "#fff",
           [breakpoints.up("xl")]: {
             height: "200px",
           },
