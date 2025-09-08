@@ -38,7 +38,7 @@ import borders from "assets/theme/base/borders";
 import CoverLayout from "layouts/authentication/components/CoverLayout";
 
 // Images
-import bgSignIn from "assets/images/signInImage.png";
+import bgSignIn from "assets/images/authentication/signInImage.png";
 
 function SignIn() {
   const [rememberMe, setRememberMe] = useState(true);

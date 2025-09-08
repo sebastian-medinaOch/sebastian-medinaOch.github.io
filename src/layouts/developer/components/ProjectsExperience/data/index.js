@@ -20,19 +20,19 @@
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
 // Images
-import profile1 from "assets/images/logo-pragma-v3.png";
-import profile2 from "assets/images/logo-bancolombia-v2.jpg";
-import profile3 from "assets/images/logo-mercantil-v2.png";
+import profile1 from "assets/images/companies/logo-pragma-v3.png";
+import profile2 from "assets/images/companies/logo-bancolombia-v2.jpg";
+import profile3 from "assets/images/companies/logo-mercantil-v2.png";
 
 // Technology Icons (temporary placeholders)
-import javaIcon from "assets/images/java.png";
-import awsIcon from "assets/images/aws-light.png";
-import dockerIcon from "assets/images/docker.png";
-import kubernetesIcon from "assets/images/kubernetes.png";
-import lambdaIcon from "assets/images/aws-lambda.png";
-import pipelineIcon from "assets/images/file-type-azurepipelines.png";
-import azureIcon from "assets/images/azure-light.png";
-import leadershipIcon from "assets/images/star-32.png";
+import javaIcon from "assets/images/technologies/java.png";
+import awsIcon from "assets/images/technologies/aws-light.png";
+import dockerIcon from "assets/images/technologies/docker.png";
+import kubernetesIcon from "assets/images/technologies/kubernetes.png";
+import lambdaIcon from "assets/images/technologies/aws-lambda.png";
+import pipelineIcon from "assets/images/technologies/file-type-azurepipelines.png";
+import azureIcon from "assets/images/technologies/azure-light.png";
+import leadershipIcon from "assets/images/technologies/star-32.png";
 
 export default function data() {
   return {

@@ -52,7 +52,7 @@ import Collaboration from "examples/Icons/Collaboration";
 import Teaching from "examples/Icons/Teaching";
 import Learning from "examples/Icons/Learning";
 
-function PlatformSettings() {
+function PersonalCharacteristics() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
   
@@ -168,4 +168,4 @@ function PlatformSettings() {
   );
 }
 
-export default PlatformSettings;
+export default PersonalCharacteristics;

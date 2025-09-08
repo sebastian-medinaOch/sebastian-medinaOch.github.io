@@ -34,7 +34,7 @@ import VuiTypography from "components/VuiTypography";
 import Table from "examples/Tables/Table";
 
 // Data
-import data from "layouts/developer/components/Projects/data";
+import data from "layouts/developer/components/Skills/data";
 
 // Styles
 import {
@@ -44,9 +44,9 @@ import {
   levelFilterInput,
   tableContainer,
   paginationContainer
-} from "layouts/developer/components/Projects/styles";
+} from "layouts/developer/components/Skills/styles";
 
-function Projects() {
+function Skills() {
   // ===== DATA & STATE =====
   const { columns, rows } = data();
   const [page, setPage] = useState(1);
@@ -185,4 +185,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Skills;
