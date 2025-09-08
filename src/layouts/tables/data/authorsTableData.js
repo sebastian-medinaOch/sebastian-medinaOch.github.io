@@ -24,12 +24,12 @@ import VuiAvatar from "components/VuiAvatar";
 import VuiBadge from "components/VuiBadge";
 
 // Images
-import avatar1 from "assets/images/avatar1.png";
-import avatar2 from "assets/images/avatar2.png";
-import avatar3 from "assets/images/avatar3.png";
-import avatar4 from "assets/images/avatar4.png";
-import avatar5 from "assets/images/avatar5.png";
-import avatar6 from "assets/images/avatar6.png";
+import avatar1 from "assets/images/avatars/avatar1.png";
+import avatar2 from "assets/images/avatars/avatar2.png";
+import avatar3 from "assets/images/avatars/avatar3.png";
+import avatar4 from "assets/images/avatars/avatar4.png";
+import avatar5 from "assets/images/avatars/avatar5.png";
+import avatar6 from "assets/images/avatars/avatar6.png";
 
 function Author({ image, name, email }) {
   return (

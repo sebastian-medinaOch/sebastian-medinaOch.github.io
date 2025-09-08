@@ -23,7 +23,7 @@ import Grid from "@mui/material/Grid";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 // Images
-import burceMars from "assets/images/avatar-simmmple.png";
+import burceMars from "assets/images/avatars/avatar-simmmple.png";
 // Vision UI Dashboard React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 import VuiAvatar from "components/VuiAvatar";

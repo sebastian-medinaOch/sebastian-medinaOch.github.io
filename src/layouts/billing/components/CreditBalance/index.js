@@ -22,7 +22,7 @@ import React from "react";
 import { Card, Stack } from "@mui/material";
 
 // Vision UI Dashboard assets
-import balance from "assets/images/billing-background-balance.png";
+import balance from "assets/images/backgrounds/billing-background-balance.png";
 import Graph from "assets/images/shapes/graph-billing.svg";
 
 import palette from "assets/theme/base/colors";

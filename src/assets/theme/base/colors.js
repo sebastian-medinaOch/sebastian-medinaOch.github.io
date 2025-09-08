@@ -28,12 +28,13 @@ export default {
   },
 
   sidenav: {
-    button: "#1a1f37",
+    button: "#000000ff",
+    focus: "#ff6b35", // Color cuando se presiona botón del menú
   },
 
   text: {
     main: "#a0aec0",
-    focus: "#ffffff",
+    focus: "#ff6b35", // Color naranja cuando se presiona
   },
 
   transparent: {
@@ -46,7 +47,7 @@ export default {
   },
 
   brand: {
-    main: "#0075ff",
+    main: "#ffffffff",
     focus: "#0075ff",
   },
 
@@ -57,7 +58,7 @@ export default {
   },
 
   primary: {
-    main: "#4318ff",
+    main: "#ffffffff",
     focus: "#9f7aea",
   },
 
@@ -96,8 +97,8 @@ export default {
 
   // Other colors
   info: {
-    main: "#0075ff",
-    focus: "#3993fe",
+    main: "#238680", //Color principal de la paleta
+    focus: "#ff6b35", // Color naranja cuando se presiona
     charts: {
       100: "#2d8cfc",
       200: "#2370cc",
@@ -180,8 +181,8 @@ export default {
 
     card: {
       deg: "127.09",
-      main: "rgba(6, 11, 40, 0.94) 19.41%",
-      state: "rgba(10, 14, 35, 0.49) 76.65%",
+      main: "#000000 19.41%",
+      state: "#000000 76.65%",
     },
 
     menu: {

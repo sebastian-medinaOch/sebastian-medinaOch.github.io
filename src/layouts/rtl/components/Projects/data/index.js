@@ -18,10 +18,10 @@ import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
 import logoJira from "assets/images/small-logos/logo-jira.svg";
 import logoInvesion from "assets/images/small-logos/logo-invision.svg";
-import avatar1 from "assets/images/avatar1.png";
-import avatar2 from "assets/images/avatar2.png";
-import avatar3 from "assets/images/avatar3.png";
-import avatar4 from "assets/images/avatar4.png";
+import avatar1 from "assets/images/avatars/avatar1.png";
+import avatar2 from "assets/images/avatars/avatar2.png";
+import avatar3 from "assets/images/avatars/avatar3.png";
+import avatar4 from "assets/images/avatars/avatar4.png";
 
 export default function data() {
   const avatars = (members) =>
