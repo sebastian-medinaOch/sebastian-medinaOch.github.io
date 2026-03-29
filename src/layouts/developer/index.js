@@ -20,7 +20,7 @@ function Overview() {
   return (
     <DashboardLayout>
       <Header />
-      <VuiBox mt={5} mb={3}>
+      <VuiBox mt={5} mb={3} id="cv-area">
         <Grid
           container
           spacing={3}

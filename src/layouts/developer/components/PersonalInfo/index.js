@@ -1,22 +1,22 @@
-
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
-
+import { useTranslation } from "react-i18next";
 import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 
 function PersonalInfo() {
+  const { t } = useTranslation();
+
   return (
     <ProfileInfoCard
-      title="Información personal"
-      description="Especialista en Java + arquitectura hexagonal para diseñar e implementar microservicios escalables en cloud (AWS/Azure), con pipelines CI/CD, contenedores y control de calidad continuo. Enfoque práctico, métricas y entrega confiable; ampliando alcance a full-stack con React, flutter, etc."
+      title={t("personalInfo.title")}
+      description={t("personalInfo.description")}
       info={{
-        nombre: "Sebastian Medina Ochoa",
-        telefono: "(+34) 614 076 617",
-        correo: "sebasthyy1@gmail.com",
-        ubicacion: "Malaga, España",
-        experiencia: "5 años",
+        [t("personalInfo.labels.nombre")]: "Sebastian Medina Ochoa",
+        [t("personalInfo.labels.telefono")]: "(+34) 614 076 617",
+        [t("personalInfo.labels.correo")]: "sebasthyy1@gmail.com",
+        [t("personalInfo.labels.ubicacion")]: t("personalInfo.values.ubicacion"),
+        [t("personalInfo.labels.experiencia")]: t("personalInfo.values.experiencia"),
       }}
       social={[
         {

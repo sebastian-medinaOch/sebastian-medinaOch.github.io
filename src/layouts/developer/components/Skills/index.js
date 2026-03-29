@@ -1,7 +1,5 @@
-
-
-
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 
 import Card from "@mui/material/Card";
@@ -31,20 +29,19 @@ import {
 } from "layouts/developer/components/Skills/styles";
 
 function Skills() {
-  
-  const { columns, rows } = data();
+  const { t } = useTranslation();
+  const { columns, rows } = data(t);
   const [page, setPage] = useState(1);
   const [selectedLevels, setSelectedLevels] = useState([]);
   const [selectedSkills, setSelectedSkills] = useState([]);
   const rowsPerPage = 5;
 
-  
   const skillLevels = [
-    { label: "Experto", value: "Experto" },
-    { label: "Avanzado", value: "Avanzado" },
-    { label: "Intermedio", value: "Intermedio" },
-    { label: "Básico", value: "Básico" },
-    { label: "Principiante", value: "Principiante" }
+    { label: t("skills.levels.expert"), value: t("skills.levels.expert") },
+    { label: t("skills.levels.advanced"), value: t("skills.levels.advanced") },
+    { label: t("skills.levels.intermediate"), value: t("skills.levels.intermediate") },
+    { label: t("skills.levels.basic"), value: t("skills.levels.basic") },
+    { label: t("skills.levels.beginner"), value: t("skills.levels.beginner") }
   ];
 
   const skillNames = rows.map(row => {
@@ -52,13 +49,12 @@ function Skills() {
     return { label: skillName, value: skillName };
   }).sort((a, b) => a.label.localeCompare(b.label));
 
-  
   const getSkillLevelText = (stars) => {
-    if (stars >= 4.5) return "Experto";
-    if (stars >= 3.5) return "Avanzado";
-    if (stars >= 2.5) return "Intermedio";
-    if (stars >= 1.5) return "Básico";
-    return "Principiante";
+    if (stars >= 4.5) return t("skills.levels.expert");
+    if (stars >= 3.5) return t("skills.levels.advanced");
+    if (stars >= 2.5) return t("skills.levels.intermediate");
+    if (stars >= 1.5) return t("skills.levels.basic");
+    return t("skills.levels.beginner");
   };
 
   const getSkillName = (row) => {
@@ -71,7 +67,6 @@ function Skills() {
     return getSkillLevelText(stars);
   };
 
-  
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -86,7 +81,6 @@ function Skills() {
     setPage(1);
   };
 
-  
   const filteredRows = rows.filter(row => {
     const matchesLevel = selectedLevels.length === 0 || 
       selectedLevels.some(selected => selected.value === getSkillLevel(row));
@@ -97,20 +91,18 @@ function Skills() {
     return matchesLevel && matchesSkill;
   });
 
-  
   const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
   const paginatedRows = filteredRows.slice((page - 1) * rowsPerPage, page * rowsPerPage);
+
   return (
     <Card sx={projectsCard}>
-      {}
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
           <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
-            Habilidades - Tecnológicas
+            {t("skills.title")}
           </VuiTypography>
         </VuiBox>
         <VuiBox sx={filtersContainer}>
-          {}
           <Autocomplete
             multiple
             limitTags={1}
@@ -123,12 +115,11 @@ function Skills() {
             renderInput={(params) => (
               <TextField 
                 {...params} 
-                placeholder="Filtrar por habilidad"
+                placeholder={t("skills.filterSkill")}
               />
             )}
             sx={skillFilterInput}
           />
-          {}
           <Autocomplete
             multiple
             limitTags={1}
@@ -141,19 +132,16 @@ function Skills() {
             renderInput={(params) => (
               <TextField 
                 {...params} 
-                placeholder="Filtrar por nivel"
+                placeholder={t("skills.filterLevel")}
               />
             )}
             sx={levelFilterInput}
           />
         </VuiBox>
       </VuiBox>
-      {}
       <VuiBox sx={tableContainer}>
         <Table columns={columns} rows={paginatedRows} />
       </VuiBox>
-      
-      {}
       <VuiBox sx={paginationContainer}>
         <Stack spacing={2}>
           <Pagination 

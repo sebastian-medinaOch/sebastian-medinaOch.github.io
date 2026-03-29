@@ -5,8 +5,11 @@ import { Card, Icon } from "@mui/material";
 import welcome from "assets/images/profiles/foto-perfil-ia-v2-negro.png";
 import VuiTypography from "components/VuiTypography/index";
 import VuiBox from "components/VuiBox/index";
+import { useTranslation } from "react-i18next";
 
 const Welcome = () => {
+  const { t } = useTranslation();
+
   return (
     <Card
       sx={({ breakpoints }) => ({
@@ -22,10 +25,10 @@ const Welcome = () => {
       <VuiBox display="flex" flexDirection="column" sx={{ height: "100%" }}>
         <VuiBox display="flex" flexDirection="column" mb="auto">
           <VuiTypography color="white" variant="h3" fontWeight="bold" mb="3px">
-            ¡Bienvenido!
+            {t("welcome.title")}
           </VuiTypography>
           <VuiTypography color="white" variant="button" fontWeight="regular">
-            ¡Encantado en conocerte!
+            {t("welcome.subtitle")}
           </VuiTypography>
         </VuiBox>
         <VuiBox justifySelf="flex-end">
@@ -53,7 +56,7 @@ const Welcome = () => {
               },
             }}
           >
-            Presiona para saber de mi.
+            {t("welcome.action")}
             <Icon sx={{ fontWeight: "bold", ml: "5px" }}>arrow_forward</Icon>
           </VuiTypography>
         </VuiBox>

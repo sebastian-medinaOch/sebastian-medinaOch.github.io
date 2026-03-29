@@ -20,7 +20,7 @@ import pipelineIcon from "assets/images/technologies/file-type-azurepipelines.pn
 import azureIcon from "assets/images/technologies/azure-light.png";
 import leadershipIcon from "assets/images/technologies/star-32.png";
 
-export default function data() {
+export default function data(t) {
   return {
     projects: [
       {
@@ -30,16 +30,16 @@ export default function data() {
         component: (
           <DefaultProjectCard
             image={profile4}
-            label="Desarrollador Backend"
-            title="Inditex - PeopleNow"
-            location="Málaga, España"
-            date="Septiembre 2025 - Febrero 2026"
-            description="Desarrollé y mantuve microservicios backend en Java 21 + Spring Boot, siguiendo enfoque API-First. Implementé tests unitarios e integración, optimicé consultas SQL complejas para mejorar rendimiento y aseguré despliegues estables a preproducción y producción mediante Git/CI-CD"
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.inditex.title")}
+            location={t("experience.projects.inditex.location")}
+            date={t("experience.projects.inditex.date")}
+            description={t("experience.projects.inditex.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
               { image: javaIcon, name: "Java" },
@@ -57,16 +57,16 @@ export default function data() {
         component: (
           <DefaultProjectCard
             image={profile1}
-            label="Desarrollador Backend"
-            title="Pragma S.A.S"
-            location="Cali, Colombia"
-            date="Diciembre 2021 - Diciembre 2025"
-            description="Consultora tecnológica que me delegó como desarrollador en los diferentes clientes (bancos en Colombia). En su proyecto interno, desarrollé servicios backend con Java y Spring Boot para la gestión de vacaciones y anticipos bajo la orquestación en la nube."
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.pragma.title")}
+            location={t("experience.projects.pragma.location")}
+            date={t("experience.projects.pragma.date")}
+            description={t("experience.projects.pragma.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
               { image: javaIcon, name: "Java" },
@@ -85,16 +85,16 @@ export default function data() {
         component: (
           <DefaultProjectCard
             image={profile3}
-            label="Líder de equipo y Desarrollador Backend"
-            title="Mercantil - Capa Intermedia Banca"
-            location="Cali, Colombia"
-            date="Diciembre 2024 - Octubre 2025"
-            description="Gestioné un equipo de desarrollo para la creación de la capa intermedia de un banco en Latinoamérica, utilizando una arquitectura de microservicios con Java y Spring Boot con la nube de Azure."
+            label={t("experience.roles.leader")}
+            title={t("experience.projects.mercantil.title")}
+            location={t("experience.projects.mercantil.location")}
+            date={t("experience.projects.mercantil.date")}
+            description={t("experience.projects.mercantil.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
               { image: leadershipIcon, name: "Liderazgo" },
@@ -113,16 +113,16 @@ export default function data() {
         component: (
           <DefaultProjectCard
             image={profile5}
-            label="Desarrollador de software"
-            title="Banco Itaú Colombia"
-            location="Cali, Colombia"
-            date="Febrero 2024 - Octubre 2024"
-            description="Desarrolle actividades de actualización de versiones de Java, de la 1.8 a la 17. Creé microservicios nuevos con SpringBoot en Java 17. Desplegué los cambios de código y solucione problemas de pipelines de CI y CD. Aplique seguridad soluciones de vulnerabilidades, de coverage y ajustes de SonarQube."
+            label={t("experience.roles.software")}
+            title={t("experience.projects.itau.title")}
+            location={t("experience.projects.itau.location")}
+            date={t("experience.projects.itau.date")}
+            description={t("experience.projects.itau.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
               { image: javaIcon, name: "Java 17" },
@@ -139,16 +139,16 @@ export default function data() {
         component: (
           <DefaultProjectCard
             image={profile2}
-            label="Desarrollador Backend"
-            title="Bancolombia - Entre Cuentas"
-            location="Cali, Colombia"
-            date="Diciembre 2021 - Enero 2024"
-            description="Desarrollé servicios de pagos interbancarios utilizando Java y Spring Boot. El despliegue y la orquestación se gestionaron en la nube de AWS y Azure DevOps."
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.bancolombia.title")}
+            location={t("experience.projects.bancolombia.location")}
+            date={t("experience.projects.bancolombia.date")}
+            description={t("experience.projects.bancolombia.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
               { image: javaIcon, name: "Java" },

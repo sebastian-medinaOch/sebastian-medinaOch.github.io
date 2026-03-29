@@ -29,6 +29,7 @@ import routes from "routes";
 
 
 import { useVisionUIController, setMiniSidenav } from "context";
+import FloatingMenu from "examples/FloatingMenu";
 
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
@@ -37,7 +38,7 @@ export default function App() {
   const [rtlCache, setRtlCache] = useState(null);
   const { pathname } = useLocation();
 
-  
+
   useMemo(() => {
     const cacheRtl = createCache({
       key: "rtl",
@@ -47,7 +48,7 @@ export default function App() {
     setRtlCache(cacheRtl);
   }, []);
 
-  
+
   const handleOnMouseEnter = () => {
     if (miniSidenav && !onMouseEnter) {
       setMiniSidenav(dispatch, false);
@@ -55,7 +56,7 @@ export default function App() {
     }
   };
 
-  
+
   const handleOnMouseLeave = () => {
     if (onMouseEnter) {
       setMiniSidenav(dispatch, true);
@@ -63,12 +64,12 @@ export default function App() {
     }
   };
 
-  
+
   useEffect(() => {
     document.body.setAttribute("dir", direction);
   }, [direction]);
 
-  
+
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
@@ -95,6 +96,7 @@ export default function App() {
           {getRoutes(routes)}
           <Redirect from="*" to="/developer" />
         </Switch>
+        <FloatingMenu />
       </ThemeProvider>
     </CacheProvider>
   ) : (
@@ -104,6 +106,7 @@ export default function App() {
         {getRoutes(routes)}
         <Redirect from="*" to="/developer" />
       </Switch>
+      <FloatingMenu />
     </ThemeProvider>
   );
 }

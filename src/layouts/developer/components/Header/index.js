@@ -1,6 +1,3 @@
-
-
-
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 
@@ -16,8 +13,10 @@ import { IoDesktop } from "react-icons/io5";
 import { IoManSharp } from "react-icons/io5";
 import { IoMailUnreadSharp } from "react-icons/io5";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Header() {
+  const { t } = useTranslation();
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
   const [tabValue, setTabValue] = useState(0);
 
@@ -94,7 +93,7 @@ function Header() {
               sx={{ justifyContent: "center", alignItems: "flex-start" }}
             >
               <VuiTypography variant="lg" color="white" fontWeight="bold">
-                Sebastian Medina Ochoa
+                {t("header.name")}
               </VuiTypography>
               <VuiTypography variant="button" color="text" fontWeight="regular">
                 sebasthyy1@gmail.com

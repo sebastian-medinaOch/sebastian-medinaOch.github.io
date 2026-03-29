@@ -6,3 +6,15 @@
   --c5:#69fff8; /* acento */
   --c6:#000000; /* negro */
 }
+
+body.light-mode-filter {
+  filter: invert(1) hue-rotate(180deg);
+  background: white !important;
+}
+
+body.light-mode-filter img, 
+body.light-mode-filter .MuiAvatar-root,
+body.light-mode-filter .MuiSvgIcon-root,
+body.light-mode-filter [class^='ra-'] {
+  filter: invert(1) hue-rotate(180deg);
+}

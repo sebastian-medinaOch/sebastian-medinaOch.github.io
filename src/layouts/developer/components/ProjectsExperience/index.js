@@ -1,28 +1,23 @@
-
-
-
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
-
-
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
-
-
 import data from "layouts/developer/components/ProjectsExperience/data";
+import { useTranslation } from "react-i18next";
 
 function ProjectsExperience() {
-  const { projects } = data();
+  const { t } = useTranslation();
+  const { projects } = data(t);
 
   return (
     <Card>
       <VuiBox display="flex" flexDirection="column" height="100%">
         <VuiBox display="flex" flexDirection="column" mb="24px">
           <VuiTypography color="white" variant="lg" fontWeight="bold" mb="6px">
-            Projectos - Experiencias
+            {t("experience.title")}
           </VuiTypography>
           <VuiTypography color="text" variant="button" fontWeight="regular">
-            Desarrollo de software
+            {t("experience.subtitle")}
           </VuiTypography>
         </VuiBox>
         <Grid container spacing={3}>
