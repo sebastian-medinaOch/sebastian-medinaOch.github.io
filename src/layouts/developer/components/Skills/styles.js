@@ -32,7 +32,7 @@ const skillFilterInput = {
   width: '180px',
   "& .MuiOutlinedInput-root": {
     backgroundColor: "#ffffffff !important",
-    color: "white !important",
+    color: "#1e293b !important",
     "& fieldset": {
       borderColor: "#238680 !important",
     },
@@ -56,7 +56,7 @@ const levelFilterInput = {
   width: '180px',
   "& .MuiOutlinedInput-root": {
     backgroundColor: "#fbfbfbff !important",
-    color: "white !important",
+    color: "#1e293b !important",
     "& fieldset": {
       borderColor: "#238680 !important",
     },
@@ -95,11 +95,11 @@ const paginationContainer = {
   py: 2,
 };
 
-export { 
-  projectsCard, 
-  filtersContainer, 
-  skillFilterInput, 
-  levelFilterInput, 
-  tableContainer, 
-  paginationContainer 
+export {
+  projectsCard,
+  filtersContainer,
+  skillFilterInput,
+  levelFilterInput,
+  tableContainer,
+  paginationContainer
 };

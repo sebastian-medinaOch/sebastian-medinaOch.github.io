@@ -13,9 +13,10 @@ function PersonalInfo() {
       description="Especialista en Java + arquitectura hexagonal para diseñar e implementar microservicios escalables en cloud (AWS/Azure), con pipelines CI/CD, contenedores y control de calidad continuo. Enfoque práctico, métricas y entrega confiable; ampliando alcance a full-stack con React, flutter, etc."
       info={{
         nombre: "Sebastian Medina Ochoa",
-        telefono: "(34) 634 602 566",
+        telefono: "(+34) 614 076 617",
         correo: "sebasthyy1@gmail.com",
         ubicacion: "Malaga, España",
+        experiencia: "5 años",
       }}
       social={[
         {

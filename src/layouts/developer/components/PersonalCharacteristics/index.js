@@ -55,7 +55,7 @@ import Learning from "examples/Icons/Learning";
 function PersonalCharacteristics() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5;
-  
+
   const aptitudes = [
     { icon: <ProblemSolving size="16px" />, title: "Resolución de problemas complejos y pensamiento analítico" },
     { icon: <Architecture size="16px" />, title: "Modelado de dominio y diseño de soluciones" },
@@ -72,11 +72,11 @@ function PersonalCharacteristics() {
     { icon: <Teaching size="16px" />, title: "Mentorización y transferencia de conocimiento" },
     { icon: <Learning size="16px" />, title: "Adaptabilidad y aprendizaje autónomo continuo" },
   ];
-  
+
   const totalPages = Math.ceil(aptitudes.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const currentAptitudes = aptitudes.slice(startIndex, startIndex + itemsPerPage);
-  
+
   const handlePageChange = (event, page) => {
     setCurrentPage(page);
   };
@@ -132,9 +132,9 @@ function PersonalCharacteristics() {
           </VuiBox>
         </Card>
       </Grid>
-      
+
       {/* Idiomas */}
-      <Grid item xs={1}>
+      <Grid item xs={12}>
         <Card>
           <VuiBox>
             <VuiTypography variant="lg" fontWeight="bold" color="white" textTransform="capitalize">
@@ -142,7 +142,7 @@ function PersonalCharacteristics() {
             </VuiTypography>
             <VuiBox mb={2}>
               <VuiBox display="flex" alignItems="center">
-                <BsFillFlagFill color="green" size="15px" mr="60px"  />
+                <BsFillFlagFill color="green" size="15px" mr="60px" />
                 <VuiTypography variant="button" color="text" fontWeight="regular" ml="5px">
                   Competencias lingüísticas
                 </VuiTypography>
@@ -162,7 +162,39 @@ function PersonalCharacteristics() {
             />
           </VuiBox>
         </Card>
-        
+      </Grid>
+
+      {/* Educación */}
+      <Grid item xs={12}>
+        <Card>
+          <VuiBox mb={3} textAlign="center">
+            <VuiTypography variant="h3" fontWeight="bold" color="info" textTransform="uppercase">
+              EDUCACIÓN
+            </VuiTypography>
+          </VuiBox>
+          <VuiBox textAlign="center" mb={3}>
+            <VuiTypography variant="h5" color="white" fontWeight="bold">
+              2019 - 2020
+            </VuiTypography>
+            <VuiTypography variant="button" color="white" fontWeight="bold" display="block" mt={0.5}>
+              Tecnico en programación de software
+            </VuiTypography>
+            <VuiTypography variant="caption" color="text" fontWeight="regular">
+              Institución SENA - Colombia
+            </VuiTypography>
+          </VuiBox>
+          <VuiBox textAlign="center" mb={1}>
+            <VuiTypography variant="h5" color="white" fontWeight="bold">
+              2020 - 2021
+            </VuiTypography>
+            <VuiTypography variant="button" color="white" fontWeight="bold" display="block" mt={0.5}>
+              Tecnologo en desarrollo de sofware
+            </VuiTypography>
+            <VuiTypography variant="caption" color="text" fontWeight="regular">
+              Institución SENA - Colombia
+            </VuiTypography>
+          </VuiBox>
+        </Card>
       </Grid>
     </Grid>
   );

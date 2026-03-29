@@ -41,6 +41,7 @@ import TechIcon from "examples/Icons/TechIcon";
 import Pipeline from "examples/Icons/Pipeline";
 import SqlIcon from "examples/Icons/SqlIcon";
 import NoSQL from "examples/Icons/NoSQL";
+import { SiApachekafka } from "react-icons/si";
 
 export default function data() {
   // Función para convertir porcentaje a estrellas (0-5)
@@ -596,6 +597,41 @@ export default function data() {
             <RabbitMQ size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               RabbitMQ
+            </VuiTypography>
+          </VuiBox>
+        ),
+        años: (
+          <VuiTypography variant="button" color="white" fontWeight="bold">
+            4 años
+          </VuiTypography>
+        ),
+        nivel: (
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
+            </VuiTypography>
+          </VuiBox>
+        ),
+      },
+      {
+        tecnologias: (
+          <VuiBox display="flex" alignItems="center">
+            <SiApachekafka size="20px" color="#fff" />
+            <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+              Kafka
             </VuiTypography>
           </VuiBox>
         ),

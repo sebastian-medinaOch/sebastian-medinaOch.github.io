@@ -25,13 +25,16 @@ import PropTypes from "prop-types";
 // @mui material components
 import Tooltip from "@mui/material/Tooltip";
 
+// react-icons
+import { IoLocationOutline, IoCalendarOutline } from "react-icons/io5";
+
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
 import VuiAvatar from "components/VuiAvatar";
 
-function DefaultProjectCard({ image, label, title, description, action, authors }) {
+function DefaultProjectCard({ image, label, title, description, location, date, action, authors }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <VuiAvatar
@@ -88,6 +91,24 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             {label}
           </VuiTypography>
         </VuiBox>
+        <VuiBox display="flex" flexDirection="column" mb={1} mt={0.5}>
+          {location && (
+            <VuiBox display="flex" alignItems="center" mb={0.5}>
+              <IoLocationOutline color="#A0AEC0" size="14px" />
+              <VuiTypography variant="xxs" color="text" fontWeight="medium" ml={0.5}>
+                {location}
+              </VuiTypography>
+            </VuiBox>
+          )}
+          {date && (
+            <VuiBox display="flex" alignItems="center">
+              <IoCalendarOutline color="#A0AEC0" size="14px" />
+              <VuiTypography variant="xxs" color="text" fontWeight="medium" ml={0.5}>
+                {date}
+              </VuiTypography>
+            </VuiBox>
+          )}
+        </VuiBox>
         <VuiBox mb={1}>
           {action.type === "internal" ? (
             <VuiTypography
@@ -118,30 +139,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             {description}
           </VuiTypography>
         </VuiBox>
-        <VuiBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
-            <VuiButton
-              component={Link}
-              to={action.route}
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          ) : (
-            <VuiButton
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          )}
+        <VuiBox display="flex" justifyContent="flex-end" alignItems="center">
           <VuiBox display="flex">{renderAuthors}</VuiBox>
         </VuiBox>
       </VuiBox>
@@ -160,6 +158,8 @@ DefaultProjectCard.propTypes = {
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  date: PropTypes.string,
   action: PropTypes.shape({
     type: PropTypes.oneOf(["external", "internal"]),
     route: PropTypes.string.isRequired,
