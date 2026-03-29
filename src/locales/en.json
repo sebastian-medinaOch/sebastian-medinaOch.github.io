@@ -10,7 +10,8 @@
   "menu": {
     "translate": "Switch page language",
     "download": "Download CV as PDF",
-    "theme": "Toggle page theme"
+    "themeLight": "Enable light mode",
+    "themeDark": "Enable dark mode"
   },
   "personalInfo": {
     "title": "Personal info",

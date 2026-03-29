@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { MdTranslate, MdDownload, MdBrightness4, MdKeyboardArrowUp, MdClose } from 'react-icons/md';
+import { MdTranslate, MdDownload, MdBrightness4, MdBrightness7, MdKeyboardArrowUp, MdClose } from 'react-icons/md';
 import { useTranslation } from 'react-i18next';
-import html2pdf from 'html2pdf.js';
+import { generateCvPdf } from 'utils/generateCvPdf';
 
 const menuStyle = {
   position: 'fixed',
@@ -65,9 +65,8 @@ const labelStyle = {
   pointerEvents: 'none',
 };
 
-const FloatingMenu = () => {
+const FloatingMenu = ({ onToggleTheme, isLight }) => {
   const { i18n, t } = useTranslation();
-  const [isLight, setIsLight] = useState(false);
   const [open, setOpen] = useState(false);
 
   const handleTranslate = () => {
@@ -76,29 +75,22 @@ const FloatingMenu = () => {
   };
 
   const handleTheme = () => {
-    const next = !isLight;
-    setIsLight(next);
-    document.body.classList.toggle('light-mode-filter', next);
+    onToggleTheme();
     setOpen(false);
   };
 
   const handleDownload = () => {
-    const element = document.getElementById('cv-area');
-    const opt = {
-      margin: 0.2,
-      filename: `CV_Sebastian_Medina_${i18n.language.toUpperCase()}.pdf`,
-      image: { type: 'jpeg', quality: 1 },
-      html2canvas: { scale: 2, useCORS: true, backgroundColor: '#0f172a' },
-      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
-    };
-    html2pdf().set(opt).from(element).save();
+    generateCvPdf(t, i18n.language);
     setOpen(false);
   };
+
+  const themeLabel = isLight ? t('menu.themeDark') : t('menu.themeLight');
+  const ThemeIcon = isLight ? MdBrightness7 : MdBrightness4;
 
   const actions = [
     { icon: <MdTranslate size={20} color="#3dc4ba" />, label: t('menu.translate'), action: handleTranslate },
     { icon: <MdDownload size={20} color="#3dc4ba" />, label: t('menu.download'), action: handleDownload },
-    { icon: <MdBrightness4 size={20} color="#3dc4ba" />, label: t('menu.theme'), action: handleTheme },
+    { icon: <ThemeIcon size={20} color="#3dc4ba" />, label: themeLabel, action: handleTheme },
   ];
 
   return (
@@ -109,8 +101,14 @@ const FloatingMenu = () => {
           <button
             style={actionBtnStyle}
             onClick={action.action}
-            onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.borderColor = '#3dc4ba'; }}
-            onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.borderColor = '#238680'; }}
+            onMouseEnter={e => {
+              e.currentTarget.style.transform = 'scale(1.1)';
+              e.currentTarget.style.borderColor = '#3dc4ba';
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.borderColor = '#238680';
+            }}
           >
             {action.icon}
           </button>
@@ -119,8 +117,14 @@ const FloatingMenu = () => {
       <button
         style={fabStyle}
         onClick={() => setOpen(o => !o)}
-        onMouseEnter={e => { e.currentTarget.style.transform = 'scale(1.08)'; e.currentTarget.style.boxShadow = '0 6px 25px rgba(35, 134, 128, 0.7)'; }}
-        onMouseLeave={e => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.boxShadow = '0 4px 20px rgba(35, 134, 128, 0.5)'; }}
+        onMouseEnter={e => {
+          e.currentTarget.style.transform = 'scale(1.08)';
+          e.currentTarget.style.boxShadow = '0 6px 25px rgba(35, 134, 128, 0.7)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.transform = 'scale(1)';
+          e.currentTarget.style.boxShadow = '0 4px 20px rgba(35, 134, 128, 0.5)';
+        }}
         aria-label="Utility menu"
       >
         {open

@@ -1,20 +1,28 @@
 :root{
-  --c1:#103633; /* fondo profundo */
-  --c2:#105656; /* fondo elevado */
-  --c3:#238680; /* primario */
-  --c4:#3dc4ba; /* secundario */
-  --c5:#69fff8; /* acento */
-  --c6:#000000; /* negro */
+  --c1:#103633;
+  --c2:#105656;
+  --c3:#238680;
+  --c4:#3dc4ba;
+  --c5:#69fff8;
+  --c6:#000000;
 }
 
-body.light-mode-filter {
+#page-wrapper.light-mode-filter {
   filter: invert(1) hue-rotate(180deg);
-  background: white !important;
 }
 
-body.light-mode-filter img, 
-body.light-mode-filter .MuiAvatar-root,
-body.light-mode-filter .MuiSvgIcon-root,
-body.light-mode-filter [class^='ra-'] {
+#page-wrapper.light-mode-filter img,
+#page-wrapper.light-mode-filter video,
+#page-wrapper.light-mode-filter .MuiAvatar-root,
+#page-wrapper.light-mode-filter .MuiAvatar-img,
+#page-wrapper.light-mode-filter [style*="background-image"] {
   filter: invert(1) hue-rotate(180deg);
+}
+
+#page-wrapper.light-mode-filter .welcome-text-overlay {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#page-wrapper.light-mode-filter .welcome-text-overlay * {
+  color: white !important;
 }

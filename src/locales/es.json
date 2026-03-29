@@ -8,9 +8,10 @@
     "name": "Sebastian Medina Ochoa"
   },
   "menu": {
-    "translate": "Traducir a Inglés",
+    "translate": "Traducir página",
     "download": "Descargar CV",
-    "theme": "Cambiar Tema"
+    "themeLight": "Activar modo claro",
+    "themeDark": "Activar modo oscuro"
   },
   "personalInfo": {
     "title": "Información personal",
