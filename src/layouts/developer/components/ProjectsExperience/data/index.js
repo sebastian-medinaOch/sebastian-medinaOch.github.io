@@ -1,32 +1,16 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Vision UI Dashboard React example components
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
-// Images
+
 import profile1 from "assets/images/companies/logo-pragma-v3.png";
 import profile2 from "assets/images/companies/logo-bancolombia-v2.jpg";
 import profile3 from "assets/images/companies/logo-mercantil-v2.png";
 import profile4 from "assets/images/companies/logo-inditex-v1.png";
 import profile5 from "assets/images/companies/logo-itau-v1.png";
 
-// Technology Icons (temporary placeholders)
+
 import javaIcon from "assets/images/technologies/java.png";
 import awsIcon from "assets/images/technologies/aws-light.png";
 import dockerIcon from "assets/images/technologies/docker.png";

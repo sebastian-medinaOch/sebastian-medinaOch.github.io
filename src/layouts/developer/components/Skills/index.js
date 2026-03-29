@@ -1,42 +1,26 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 
 import { useState } from "react";
 
-// @mui material components
+
 import Card from "@mui/material/Card";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
-// Vision UI Dashboard Materail-UI example components
+
 import Table from "examples/Tables/Table";
 
-// Data
+
 import data from "layouts/developer/components/Skills/data";
 
-// Styles
+
 import {
   projectsCard,
   filtersContainer,
@@ -47,14 +31,14 @@ import {
 } from "layouts/developer/components/Skills/styles";
 
 function Skills() {
-  // ===== DATA & STATE =====
+  
   const { columns, rows } = data();
   const [page, setPage] = useState(1);
   const [selectedLevels, setSelectedLevels] = useState([]);
   const [selectedSkills, setSelectedSkills] = useState([]);
   const rowsPerPage = 5;
 
-  // ===== FILTER OPTIONS =====
+  
   const skillLevels = [
     { label: "Experto", value: "Experto" },
     { label: "Avanzado", value: "Avanzado" },
@@ -68,7 +52,7 @@ function Skills() {
     return { label: skillName, value: skillName };
   }).sort((a, b) => a.label.localeCompare(b.label));
 
-  // ===== HELPER FUNCTIONS =====
+  
   const getSkillLevelText = (stars) => {
     if (stars >= 4.5) return "Experto";
     if (stars >= 3.5) return "Avanzado";
@@ -87,7 +71,7 @@ function Skills() {
     return getSkillLevelText(stars);
   };
 
-  // ===== EVENT HANDLERS =====
+  
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -102,7 +86,7 @@ function Skills() {
     setPage(1);
   };
 
-  // ===== FILTERING LOGIC =====
+  
   const filteredRows = rows.filter(row => {
     const matchesLevel = selectedLevels.length === 0 || 
       selectedLevels.some(selected => selected.value === getSkillLevel(row));
@@ -113,12 +97,12 @@ function Skills() {
     return matchesLevel && matchesSkill;
   });
 
-  // ===== PAGINATION =====
+  
   const totalPages = Math.ceil(filteredRows.length / rowsPerPage);
   const paginatedRows = filteredRows.slice((page - 1) * rowsPerPage, page * rowsPerPage);
   return (
     <Card sx={projectsCard}>
-      {/* ===== HEADER & FILTERS ===== */}
+      {}
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto">
           <VuiTypography color="white" variant="lg" mb="6px" gutterBottom>
@@ -126,7 +110,7 @@ function Skills() {
           </VuiTypography>
         </VuiBox>
         <VuiBox sx={filtersContainer}>
-          {/* Filtro por Habilidad */}
+          {}
           <Autocomplete
             multiple
             limitTags={1}
@@ -144,7 +128,7 @@ function Skills() {
             )}
             sx={skillFilterInput}
           />
-          {/* Filtro por Nivel */}
+          {}
           <Autocomplete
             multiple
             limitTags={1}
@@ -164,12 +148,12 @@ function Skills() {
           />
         </VuiBox>
       </VuiBox>
-      {/* ===== TABLE ===== */}
+      {}
       <VuiBox sx={tableContainer}>
         <Table columns={columns} rows={paginatedRows} />
       </VuiBox>
       
-      {/* ===== PAGINATION ===== */}
+      {}
       <VuiBox sx={paginationContainer}>
         <Stack spacing={2}>
           <Pagination 

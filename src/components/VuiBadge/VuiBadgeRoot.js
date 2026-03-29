@@ -1,22 +1,6 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// @mui material components
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
 
@@ -29,7 +13,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
   const { borderRadius, borderWidth } = borders;
   const { pxToRem, linearGradient } = functions;
 
-  // padding values
+  
   const paddings = {
     xs: "0.575em 0.775em 0.4em",
     sm: "0.55em 0.9em",
@@ -37,20 +21,20 @@ export default styled(Badge)(({ theme, ownerState }) => {
     lg: "0.925em 1.375em 0.85em",
   };
 
-  // fontSize value
+  
   const fontSizeValue = size === "xs" ? fontSize.xxs : fontSize.xs;
 
-  // border value
+  
   const borderValue = border ? `${borderWidth[1]} solid ${white.main}` : "none";
 
-  // borderRadius value
+  
   let borderRadiusValue = size === "xs" ? borderRadius.sm : borderRadius.md;
 
   if (circular) {
     borderRadiusValue = borderRadius.section;
   }
 
-  // styles for the badge with indicator={true}
+  
   const indicatorStyles = (sizeProp) => {
     let widthValue = pxToRem(20);
     let heightValue = pxToRem(20);
@@ -75,7 +59,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the badge with variant="gradient"
+  
   const gradientStyles = (colorProp) => {
     const backgroundValue = gradients[colorProp]
       ? linearGradient(gradients[colorProp].main, gradients[colorProp].state)
@@ -88,7 +72,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the badge with variant="contained"
+  
   const containedStyles = (colorProp) => {
     const backgroundValue = badgeColors[colorProp]
       ? badgeColors[colorProp].background
@@ -104,7 +88,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the badge with no children and container={false}
+  
   const standAloneStyles = () => ({
     position: "static",
     marginLeft: pxToRem(8),
@@ -112,7 +96,7 @@ export default styled(Badge)(({ theme, ownerState }) => {
     fontSize: pxToRem(9),
   });
 
-  // styles for the badge with container={true}
+  
   const containerStyles = () => ({
     position: "relative",
     transform: "none",

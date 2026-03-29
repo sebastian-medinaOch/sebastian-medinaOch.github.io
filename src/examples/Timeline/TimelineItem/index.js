@@ -1,36 +1,20 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// prop-types is a library for typechecking of props
 import PropTypes from "prop-types";
 
-// @mui material components
+
 import Icon from "@mui/material/Icon";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiBadge from "components/VuiBadge";
 
-// Timeline context
+
 import { useTimeline } from "examples/Timeline/context";
 
-// Custom styles for the TimelineItem
+
 import { timelineItem } from "examples/Timeline/TimelineItem/styles";
 
 function TimelineItem({ color, icon, title, dateTime, description, badges, lastItem }) {
@@ -88,7 +72,7 @@ function TimelineItem({ color, icon, title, dateTime, description, badges, lastI
   );
 }
 
-// Setting default values for the props of TimelineItem
+
 TimelineItem.defaultProps = {
   color: "info",
   badges: [],
@@ -96,7 +80,7 @@ TimelineItem.defaultProps = {
   description: "",
 };
 
-// Typechecking props for the TimelineItem
+
 TimelineItem.propTypes = {
   color: PropTypes.oneOf([
     "primary",

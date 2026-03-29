@@ -1,24 +1,8 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import { useState } from "react";
 
-// @mui material components
+
 import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Pagination from '@mui/material/Pagination';
@@ -27,13 +11,14 @@ import Stack from '@mui/material/Stack';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
-// React icons
-import { BsFillFlagFill } from "react-icons/bs";
 
-// Vision UI Dashboard React example components
+import { BsFillFlagFill } from "react-icons/bs";
+import { FaBookBookmark } from "react-icons/fa6";
+
+
 import TimelineItem from "examples/Timeline/TimelineItem";
 import Spain from "examples/Icons/Spain";
 import English from "examples/Icons/English";
@@ -84,7 +69,7 @@ function PersonalCharacteristics() {
 
   return (
     <Grid container spacing={3} direction="column">
-      {/* Aptitudes */}
+      {}
       <Grid item xs={12}>
         <Card>
           <VuiBox >
@@ -133,7 +118,7 @@ function PersonalCharacteristics() {
         </Card>
       </Grid>
 
-      {/* Idiomas */}
+      {}
       <Grid item xs={12}>
         <Card>
           <VuiBox>
@@ -164,13 +149,21 @@ function PersonalCharacteristics() {
         </Card>
       </Grid>
 
-      {/* Educación */}
+      {}
       <Grid item xs={12}>
         <Card>
-          <VuiBox mb={3} textAlign="center">
-            <VuiTypography variant="h3" fontWeight="bold" color="info" textTransform="uppercase">
-              EDUCACIÓN
+          <VuiBox>
+            <VuiTypography variant="lg" fontWeight="bold" color="white" textTransform="capitalize">
+              Educación
             </VuiTypography>
+            <VuiBox mb={2}>
+              <VuiBox display="flex" alignItems="center">
+                <FaBookBookmark color="white" size="15px" mr="60px" />
+                <VuiTypography variant="button" color="text" fontWeight="regular" ml="5px">
+                  Carreras profesionales.
+                </VuiTypography>
+              </VuiBox>
+            </VuiBox>
           </VuiBox>
           <VuiBox textAlign="center" mb={3}>
             <VuiTypography variant="h5" color="white" fontWeight="bold">

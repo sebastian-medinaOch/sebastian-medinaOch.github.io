@@ -1,9 +1,9 @@
-// @mui icons
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 
-// Vision UI Dashboard React components
+
 import ProfileInfoCard from "examples/Cards/InfoCards/ProfileInfoCard";
 
 function PersonalInfo() {

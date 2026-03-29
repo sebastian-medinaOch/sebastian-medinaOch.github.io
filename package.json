@@ -1,13 +1,12 @@
 {
-	"name": "vision-ui-dashboard-react",
-	"version": "3.0.0",
+	"name": "portafolio",
+	"version": "1.0.0",
 	"private": true,
-	"author": "Creative Tim",
-	"license": "See license in https://www.creative-tim.com/license",
-	"description": "Material UI version of Vision UI Dashboard by Creative Tim",
-	"homepage": "https://sebastian-medinaOch.github.io/#/dashboard",
+	"author": "Sebastian Medina Ochoa",
+	"description": "Portafolio Personal",
+	"homepage": "https://sebastian-medinaOch.github.io/#/developer",
 	"bugs": {
-		"url": "https://github.com/creativetimofficial/vision-ui-dashboard-react/issues"
+		"url": "https://github.com/sebastian-medinaOch/sebastian-medinaOch.github.io/issues"
 	},
 	"repository": {
 		"type": "git",

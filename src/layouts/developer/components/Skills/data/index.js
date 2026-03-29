@@ -1,12 +1,12 @@
-// @mui material components
+
 import Rating from "@mui/material/Rating";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiProgress from "components/VuiProgress";
 
-// Images
+
 import Java from "examples/Icons/Java";
 import SpringBoot from "examples/Icons/SpringBoot";
 import AWS from "examples/Icons/AWS";
@@ -44,12 +44,12 @@ import NoSQL from "examples/Icons/NoSQL";
 import { SiApachekafka } from "react-icons/si";
 
 export default function data() {
-  // Función para convertir porcentaje a estrellas (0-5)
+  
   const getStarsFromPercentage = (percentage) => {
     return (percentage / 100) * 5;
   };
 
-  // Función para obtener el texto del nivel de habilidad
+  
   const getSkillLevelText = (stars) => {
     if (stars >= 4.5) return "Experto";
     if (stars >= 3.5) return "Avanzado";

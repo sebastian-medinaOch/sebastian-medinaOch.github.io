@@ -1,30 +1,14 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// @mui material components
 import Grid from "@mui/material/Grid";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import Footer from "examples/Footer";
-// Vision UI Dashboard React example components
+
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
-// Overview page components
+
 import Header from "layouts/developer/components/Header";
 import PersonalCharacteristics from "layouts/developer/components/PersonalCharacteristics";
 import Welcome from "../developer/components/Welcome/index";
