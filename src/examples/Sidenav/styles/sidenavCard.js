@@ -1,4 +1,4 @@
-// Images
+
 import backgroundImage from "assets/images/sidenav/sidenav-card-background.png";
 
 function card(theme, ownerState) {

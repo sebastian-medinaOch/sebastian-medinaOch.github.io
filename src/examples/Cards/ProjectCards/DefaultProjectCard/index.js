@@ -1,37 +1,24 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// react-router-dom components
 import { Link } from "react-router-dom";
 
-// prop-types is a library for typechecking of props
+
 import PropTypes from "prop-types";
 
-// @mui material components
+
 import Tooltip from "@mui/material/Tooltip";
 
-// Vision UI Dashboard React components
+
+import { IoLocationOutline, IoCalendarOutline } from "react-icons/io5";
+
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
 import VuiAvatar from "components/VuiAvatar";
 
-function DefaultProjectCard({ image, label, title, description, action, authors }) {
+function DefaultProjectCard({ image, label, title, description, location, date, action, authors }) {
   const renderAuthors = authors.map(({ image: media, name }) => (
     <Tooltip key={name} title={name} placement="bottom">
       <VuiAvatar
@@ -62,19 +49,33 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
       }}
     >
       <VuiBox
-        component="img"
-        src={image}
-        mb="8px"
+        className="project-logo-container"
+        mb="16px"
         borderRadius="15px"
         sx={({ breakpoints }) => ({
           width: "100%",
-          objectFit: "contain",
+          padding: "20px",
           backgroundColor: "#fff",
+          border: "1px solid rgba(226, 232, 240, 0.3)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.05)",
           [breakpoints.up("xl")]: {
             height: "200px",
           },
         })}
-      />
+      >
+        <VuiBox
+          component="img"
+          src={image}
+          sx={{
+            maxWidth: "100%",
+            maxHeight: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </VuiBox>
 
       <VuiBox
         sx={({ breakpoints }) => ({
@@ -87,6 +88,24 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
           <VuiTypography variant="xxs" color="text" fontWeight="medium" textTransform="capitalize">
             {label}
           </VuiTypography>
+        </VuiBox>
+        <VuiBox display="flex" flexDirection="column" mb={1} mt={0.5}>
+          {location && (
+            <VuiBox display="flex" alignItems="center" mb={0.5}>
+              <IoLocationOutline color="#A0AEC0" size="14px" />
+              <VuiTypography variant="xxs" color="text" fontWeight="medium" ml={0.5}>
+                {location}
+              </VuiTypography>
+            </VuiBox>
+          )}
+          {date && (
+            <VuiBox display="flex" alignItems="center">
+              <IoCalendarOutline color="#A0AEC0" size="14px" />
+              <VuiTypography variant="xxs" color="text" fontWeight="medium" ml={0.5}>
+                {date}
+              </VuiTypography>
+            </VuiBox>
+          )}
         </VuiBox>
         <VuiBox mb={1}>
           {action.type === "internal" ? (
@@ -118,30 +137,7 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
             {description}
           </VuiTypography>
         </VuiBox>
-        <VuiBox display="flex" justifyContent="space-between" alignItems="center">
-          {action.type === "internal" ? (
-            <VuiButton
-              component={Link}
-              to={action.route}
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          ) : (
-            <VuiButton
-              component="a"
-              href={action.route}
-              target="_blank"
-              rel="noreferrer"
-              variant="outlined"
-              size="small"
-              color={action.color}
-            >
-              {action.label}
-            </VuiButton>
-          )}
+        <VuiBox display="flex" justifyContent="flex-end" alignItems="center">
           <VuiBox display="flex">{renderAuthors}</VuiBox>
         </VuiBox>
       </VuiBox>
@@ -149,17 +145,19 @@ function DefaultProjectCard({ image, label, title, description, action, authors 
   );
 }
 
-// Setting default values for the props of DefaultProjectCard
+
 DefaultProjectCard.defaultProps = {
   authors: [],
 };
 
-// Typechecking props for the DefaultProjectCard
+
 DefaultProjectCard.propTypes = {
   image: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  location: PropTypes.string,
+  date: PropTypes.string,
   action: PropTypes.shape({
     type: PropTypes.oneOf(["external", "internal"]),
     route: PropTypes.string.isRequired,

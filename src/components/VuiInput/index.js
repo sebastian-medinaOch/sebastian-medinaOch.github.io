@@ -1,33 +1,17 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import { forwardRef } from "react";
 
-// prop-types is a library for typechecking of props
+
 import PropTypes from "prop-types";
 
-// Custom styles for VuiInput
+
 import VuiInputRoot from "components/VuiInput/VuiInputRoot";
 import VuiInputWithIconRoot from "components/VuiInput/VuiInputWithIconRoot";
 import VuiInputIconBoxRoot from "components/VuiInput/VuiInputIconBoxRoot";
 import VuiInputIconRoot from "components/VuiInput/VuiInputIconRoot";
 
-// Vision UI Dashboard React contexts
+
 import { useVisionUIController } from "context";
 
 const VuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, ref) => {
@@ -71,7 +55,7 @@ const VuiInput = forwardRef(({ size, icon, error, success, disabled, ...rest }, 
   return template;
 });
 
-// Setting default values for the props of VuiInput
+
 VuiInput.defaultProps = {
   size: "medium",
   icon: {
@@ -83,7 +67,7 @@ VuiInput.defaultProps = {
   disabled: false,
 };
 
-// Typechecking props for the VuiInput
+
 VuiInput.propTypes = {
   size: PropTypes.oneOf(["small", "medium", "large"]),
   icon: PropTypes.shape({

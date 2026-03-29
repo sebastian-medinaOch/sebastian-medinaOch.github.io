@@ -1,0 +1,126 @@
+{
+  "welcome": {
+    "title": "¡Bienvenido!",
+    "subtitle": "¡Encantado en conocerte!",
+    "action": "Presiona para saber de mi."
+  },
+  "header": {
+    "name": "Sebastian Medina Ochoa"
+  },
+  "menu": {
+    "translate": "Traducir página",
+    "download": "Descargar CV",
+    "themeLight": "Activar modo claro",
+    "themeDark": "Activar modo oscuro"
+  },
+  "personalInfo": {
+    "title": "Información personal",
+    "description": "Especialista en Java + arquitectura hexagonal para diseñar e implementar microservicios escalables en cloud (AWS/Azure), con pipelines CI/CD, contenedores y control de calidad continuo. Enfoque práctico, métricas y entrega confiable; ampliando alcance a full-stack con React, flutter, etc.",
+    "labels": {
+      "nombre": "Nombre",
+      "telefono": "Teléfono",
+      "correo": "Correo",
+      "ubicacion": "Ubicación",
+      "experiencia": "Experiencia",
+      "año": "año",
+      "años": "años"
+    },
+    "values": {
+      "ubicacion": "Malaga, España",
+      "experiencia": "5 años",
+      "telefono": "(+34) 614 076 617"
+    }
+  },
+  "characteristics": {
+    "aptitudes": {
+      "title": "Aptitudes",
+      "subtitle": "Competencias técnicas especializadas",
+      "items": {
+        "problemSolving": "Resolución de problemas complejos y pensamiento analítico",
+        "architecture": "Modelado de dominio y diseño de soluciones",
+        "api": "Diseño y versionado de APIs REST con buenas prácticas",
+        "performance": "Optimización de rendimiento y escalabilidad",
+        "testing": "Diseño de pruebas y calidad: unitarias/integración, TDD/AAA",
+        "cicd": "Automatización CI/CD y control de versiones",
+        "docker": "Contenerización y orquestación: Docker/Kubernetes",
+        "monitoring": "Observabilidad aplicada: logging, métricas y trazas",
+        "database": "Gestión y modelado de datos: SQL/NoSQL",
+        "messaging": "Integración asíncrona y mensajería con patrones de resiliencia",
+        "security": "Seguridad aplicada en software: OWASP, manejo de secretos",
+        "collaboration": "Colaboración técnica y comunicación clara",
+        "teaching": "Mentorización y transferencia de conocimiento",
+        "learning": "Adaptabilidad y aprendizaje autónomo continuo"
+      }
+    },
+    "languages": {
+      "title": "Idiomas",
+      "subtitle": "Competencias lingüísticas",
+      "spanish": "Español",
+      "native": "Nativo",
+      "english": "Inglés",
+      "basic": "Básico"
+    },
+    "education": {
+      "title": "Educación",
+      "subtitle": "Carreras profesionales.",
+      "degree1": "Tecnico en programación de software",
+      "school1": "Institución SENA - Colombia",
+      "degree2": "Tecnologo en desarrollo de sofware",
+      "school2": "Institución SENA - Colombia"
+    }
+  },
+  "skills": {
+    "title": "Habilidades - Tecnológicas",
+    "search": "Buscar habilidad o tecnología...",
+    "filterSkill": "Filtrar por habilidad",
+    "filterLevel": "Filtrar por nivel",
+    "levels": {
+      "expert": "Experto",
+      "advanced": "Avanzado",
+      "intermediate": "Intermedio",
+      "basic": "Básico",
+      "beginner": "Principiante"
+    }
+  },
+  "experience": {
+    "title": "Projectos - Experiencias",
+    "subtitle": "Desarrollo de software",
+    "roles": {
+      "backend": "Desarrollador Backend",
+      "leader": "Líder de equipo y Desarrollador Backend",
+      "software": "Desarrollador de software"
+    },
+    "projects": {
+      "inditex": {
+        "title": "Inditex - PeopleNow",
+        "location": "Málaga, España",
+        "date": "Septiembre 2025 - Febrero 2026",
+        "desc": "Desarrollé y mantuve microservicios backend en Java 21 + Spring Boot, siguiendo enfoque API-First. Implementé tests unitarios e integración, optimicé consultas SQL complejas para mejorar rendimiento y aseguré despliegues estables a preproducción y producción mediante Git/CI-CD"
+      },
+      "pragma": {
+        "title": "Pragma S.A.S",
+        "location": "Cali, Colombia",
+        "date": "Diciembre 2021 - Diciembre 2025",
+        "desc": "Consultora tecnológica que me delegó como desarrollador en los diferentes clientes (bancos en Colombia). En su proyecto interno, desarrollé servicios backend con Java y Spring Boot para la gestión de vacaciones y anticipos bajo la orquestación en la nube."
+      },
+      "mercantil": {
+        "title": "Mercantil - Capa Intermedia Banca",
+        "location": "Cali, Colombia",
+        "date": "Diciembre 2024 - Octubre 2025",
+        "desc": "Gestioné un equipo de desarrollo para la creación de la capa intermedia de un banco en Latinoamérica, utilizando una arquitectura de microservicios con Java y Spring Boot con la nube de Azure."
+      },
+      "itau": {
+        "title": "Banco Itaú Colombia",
+        "location": "Cali, Colombia",
+        "date": "Febrero 2024 - Octubre 2024",
+        "desc": "Desarrolle actividades de actualización de versiones de Java, de la 1.8 a la 17. Creé microservicios nuevos con SpringBoot en Java 17. Desplegué los cambios de código y solucione problemas de pipelines de CI y CD. Aplique seguridad soluciones de vulnerabilidades, de coverage y ajustes de SonarQube."
+      },
+      "bancolombia": {
+        "title": "Bancolombia - Entre Cuentas",
+        "location": "Cali, Colombia",
+        "date": "Diciembre 2021 - Enero 2024",
+        "desc": "Desarrollé servicios de pagos interbancarios utilizando Java y Spring Boot. El despliegue y la orquestación se gestionaron en la nube de AWS y Azure DevOps."
+      }
+    }
+  }
+}

@@ -1,31 +1,15 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// react-routers components
 import { Link } from "react-router-dom";
 
-// prop-types is library for typechecking of props
+
 import PropTypes from "prop-types";
 
-// @mui material components
+
 import Card from "@mui/material/Card";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiAvatar from "components/VuiAvatar";
@@ -82,7 +66,7 @@ function ProfilesList({ title, profiles }) {
   );
 }
 
-// Typechecking props for the ProfilesList
+
 ProfilesList.propTypes = {
   title: PropTypes.string.isRequired,
   profiles: PropTypes.arrayOf(PropTypes.object).isRequired,

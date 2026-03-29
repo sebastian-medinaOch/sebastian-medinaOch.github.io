@@ -1,35 +1,19 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import { forwardRef } from "react";
 
-// prop-types is a library for typechecking of props.
+
 import PropTypes from "prop-types";
 
-// @mui material components
+
 import MenuItem from "@mui/material/MenuItem";
 import Icon from "@mui/material/Icon";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
-// custom styles for the NotificationItem
+
 import { menuItem, menuImage } from "examples/Items/NotificationItem/styles";
 
 const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref) => (
@@ -74,12 +58,12 @@ const NotificationItem = forwardRef(({ color, image, title, date, ...rest }, ref
   </MenuItem>
 ));
 
-// Setting default values for the props of NotificationItem
+
 NotificationItem.defaultProps = {
   color: "dark",
 };
 
-// Typechecking props for the NotificationItem
+
 NotificationItem.propTypes = {
   color: PropTypes.oneOf([
     "primary",

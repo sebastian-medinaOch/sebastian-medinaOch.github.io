@@ -1,30 +1,16 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Vision UI Dashboard React example components
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 
-// Images
+
 import profile1 from "assets/images/companies/logo-pragma-v3.png";
 import profile2 from "assets/images/companies/logo-bancolombia-v2.jpg";
 import profile3 from "assets/images/companies/logo-mercantil-v2.png";
+import profile4 from "assets/images/companies/logo-inditex-v1.png";
+import profile5 from "assets/images/companies/logo-itau-v1.png";
 
-// Technology Icons (temporary placeholders)
+
 import javaIcon from "assets/images/technologies/java.png";
 import awsIcon from "assets/images/technologies/aws-light.png";
 import dockerIcon from "assets/images/technologies/docker.png";
@@ -34,7 +20,7 @@ import pipelineIcon from "assets/images/technologies/file-type-azurepipelines.pn
 import azureIcon from "assets/images/technologies/azure-light.png";
 import leadershipIcon from "assets/images/technologies/star-32.png";
 
-export default function data() {
+export default function data(t) {
   return {
     projects: [
       {
@@ -43,15 +29,44 @@ export default function data() {
         xl: 4,
         component: (
           <DefaultProjectCard
-            image={profile1}
-            label="project #1 - Desarrollador Backend"
-            title="Pragma S.A.S - Proyecto Interno"
-            description="Desarrollé servicios backend con Java y Spring Boot para la gestión interna de vacaciones y anticipos bajo la orquestación en la nube de AWS."
+            image={profile4}
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.inditex.title")}
+            location={t("experience.projects.inditex.location")}
+            date={t("experience.projects.inditex.date")}
+            description={t("experience.projects.inditex.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
+            }}
+            authors={[
+              { image: javaIcon, name: "Java" },
+              { image: azureIcon, name: "Azure Cloud" },
+              { image: dockerIcon, name: "Docker" },
+              { image: kubernetesIcon, name: "Kubernetes" },
+            ]}
+          />
+        ),
+      },
+      {
+        xs: 12,
+        md: 6,
+        xl: 4,
+        component: (
+          <DefaultProjectCard
+            image={profile1}
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.pragma.title")}
+            location={t("experience.projects.pragma.location")}
+            date={t("experience.projects.pragma.date")}
+            description={t("experience.projects.pragma.desc")}
+            action={{
+              type: "internal",
+              route: "/pages/profile/profile-overview",
+              color: "white",
+              label: "",
             }}
             authors={[
               { image: javaIcon, name: "Java" },
@@ -69,21 +84,23 @@ export default function data() {
         xl: 4,
         component: (
           <DefaultProjectCard
-            image={profile2}
-            label="project #2 - Desarrollador Backend"
-            title="Bancolombia - Entre Cuentas"
-            description="Desarrollé servicios de pagos interbancarios utilizando Java y Spring Boot. El despliegue y la orquestación se gestionaron en la nube de AWS y Azure DevOps."
+            image={profile3}
+            label={t("experience.roles.leader")}
+            title={t("experience.projects.mercantil.title")}
+            location={t("experience.projects.mercantil.location")}
+            date={t("experience.projects.mercantil.date")}
+            description={t("experience.projects.mercantil.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
+              { image: leadershipIcon, name: "Liderazgo" },
               { image: javaIcon, name: "Java" },
-              { image: awsIcon, name: "AWS" },
+              { image: azureIcon, name: "Azure Cloud" },
               { image: pipelineIcon, name: "Pipeline" },
-              { image: dockerIcon, name: "Docker" },
               { image: kubernetesIcon, name: "Kubernetes" },
             ]}
           />
@@ -95,21 +112,49 @@ export default function data() {
         xl: 4,
         component: (
           <DefaultProjectCard
-            image={profile3}
-            label="project #3 - Líder de equipo y Desarrollador Backend"
-            title="Mercantil - Capa Intermedia Banca"
-            description="Gestioné un equipo de desarrollo para la creación de la capa intermedia de un banco en Latinoamérica, utilizando una arquitectura de microservicios con Java y Spring Boot con la nube de Azure."
+            image={profile5}
+            label={t("experience.roles.software")}
+            title={t("experience.projects.itau.title")}
+            location={t("experience.projects.itau.location")}
+            date={t("experience.projects.itau.date")}
+            description={t("experience.projects.itau.desc")}
             action={{
               type: "internal",
               route: "/pages/profile/profile-overview",
               color: "white",
-              label: "VIEW ALL",
+              label: "",
             }}
             authors={[
-              { image: leadershipIcon, name: "Liderazgo" },
+              { image: javaIcon, name: "Java 17" },
+              { image: pipelineIcon, name: "CI/CD" },
+              { image: dockerIcon, name: "Docker" }
+            ]}
+          />
+        ),
+      },
+      {
+        xs: 12,
+        md: 6,
+        xl: 4,
+        component: (
+          <DefaultProjectCard
+            image={profile2}
+            label={t("experience.roles.backend")}
+            title={t("experience.projects.bancolombia.title")}
+            location={t("experience.projects.bancolombia.location")}
+            date={t("experience.projects.bancolombia.date")}
+            description={t("experience.projects.bancolombia.desc")}
+            action={{
+              type: "internal",
+              route: "/pages/profile/profile-overview",
+              color: "white",
+              label: "",
+            }}
+            authors={[
               { image: javaIcon, name: "Java" },
-              { image: azureIcon, name: "Azure Cloud" },
+              { image: awsIcon, name: "AWS" },
               { image: pipelineIcon, name: "Pipeline" },
+              { image: dockerIcon, name: "Docker" },
               { image: kubernetesIcon, name: "Kubernetes" },
             ]}
           />
