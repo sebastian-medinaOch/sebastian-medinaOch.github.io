@@ -79,17 +79,28 @@ const FloatingMenu = ({ onToggleTheme, isLight }) => {
     setOpen(false);
   };
 
-  const handleDownload = () => {
-    generateCvPdf(t, i18n.language);
+  const [downloading, setDownloading] = useState(false);
+
+  const handleDownload = async () => {
     setOpen(false);
+    setDownloading(true);
+    try {
+      await generateCvPdf(t, i18n.language);
+    } finally {
+      setDownloading(false);
+    }
   };
 
   const themeLabel = isLight ? t('menu.themeDark') : t('menu.themeLight');
   const ThemeIcon = isLight ? MdBrightness7 : MdBrightness4;
 
+  const downloadIcon = downloading
+    ? <span style={{ color: '#3dc4ba', fontSize: 14, fontWeight: 'bold' }}>...</span>
+    : <MdDownload size={20} color="#3dc4ba" />;
+
   const actions = [
     { icon: <MdTranslate size={20} color="#3dc4ba" />, label: t('menu.translate'), action: handleTranslate },
-    { icon: <MdDownload size={20} color="#3dc4ba" />, label: t('menu.download'), action: handleDownload },
+    { icon: downloadIcon, label: t('menu.download'), action: handleDownload },
     { icon: <ThemeIcon size={20} color="#3dc4ba" />, label: themeLabel, action: handleTheme },
   ];
 

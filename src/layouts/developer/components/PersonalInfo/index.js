@@ -13,7 +13,7 @@ function PersonalInfo() {
       description={t("personalInfo.description")}
       info={{
         [t("personalInfo.labels.nombre")]: "Sebastian Medina Ochoa",
-        [t("personalInfo.labels.telefono")]: "(+34) 614 076 617",
+        [t("personalInfo.labels.telefono")]: t("personalInfo.values.telefono"),
         [t("personalInfo.labels.correo")]: "sebasthyy1@gmail.com",
         [t("personalInfo.labels.ubicacion")]: t("personalInfo.values.ubicacion"),
         [t("personalInfo.labels.experiencia")]: t("personalInfo.values.experiencia"),

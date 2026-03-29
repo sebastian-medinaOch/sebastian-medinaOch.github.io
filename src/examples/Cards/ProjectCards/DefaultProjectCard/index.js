@@ -49,19 +49,33 @@ function DefaultProjectCard({ image, label, title, description, location, date, 
       }}
     >
       <VuiBox
-        component="img"
-        src={image}
-        mb="8px"
+        className="project-logo-container"
+        mb="16px"
         borderRadius="15px"
         sx={({ breakpoints }) => ({
           width: "100%",
-          objectFit: "contain",
+          padding: "20px",
           backgroundColor: "#fff",
+          border: "1px solid rgba(226, 232, 240, 0.3)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.05)",
           [breakpoints.up("xl")]: {
             height: "200px",
           },
         })}
-      />
+      >
+        <VuiBox
+          component="img"
+          src={image}
+          sx={{
+            maxWidth: "100%",
+            maxHeight: "100%",
+            objectFit: "contain",
+          }}
+        />
+      </VuiBox>
 
       <VuiBox
         sx={({ breakpoints }) => ({
