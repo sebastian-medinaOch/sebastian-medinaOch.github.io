@@ -1,12 +1,12 @@
-// @mui material components
+
 import Rating from "@mui/material/Rating";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiProgress from "components/VuiProgress";
 
-// Images
+
 import Java from "examples/Icons/Java";
 import SpringBoot from "examples/Icons/SpringBoot";
 import AWS from "examples/Icons/AWS";
@@ -32,7 +32,8 @@ import Lambdas from "examples/Icons/Lambdas";
 import NodeJS from "examples/Icons/NodeJS";
 import Gradle from "examples/Icons/Gradle";
 import Maven from "examples/Icons/Maven";
-import React from "examples/Icons/React";
+import React from "react";
+import ReactIcon from "examples/Icons/React";
 import SpringFramework from "examples/Icons/SpringFramework";
 import Hibernate from "examples/Icons/Hibernate";
 import JUnit from "examples/Icons/JUnit";
@@ -41,20 +42,23 @@ import TechIcon from "examples/Icons/TechIcon";
 import Pipeline from "examples/Icons/Pipeline";
 import SqlIcon from "examples/Icons/SqlIcon";
 import NoSQL from "examples/Icons/NoSQL";
+import { SiApachekafka } from "react-icons/si";
 
-export default function data() {
-  // Función para convertir porcentaje a estrellas (0-5)
+export default function data(t) {
   const getStarsFromPercentage = (percentage) => {
     return (percentage / 100) * 5;
   };
 
-  // Función para obtener el texto del nivel de habilidad
   const getSkillLevelText = (stars) => {
-    if (stars >= 4.5) return "Experto";
-    if (stars >= 3.5) return "Avanzado";
-    if (stars >= 2.5) return "Intermedio";
-    if (stars >= 1.5) return "Básico";
-    return "Principiante";
+    if (stars >= 4.5) return t("skills.levels.expert");
+    if (stars >= 3.5) return t("skills.levels.advanced");
+    if (stars >= 2.5) return t("skills.levels.intermediate");
+    if (stars >= 1.5) return t("skills.levels.basic");
+    return t("skills.levels.beginner");
+  };
+
+  const yearsLabel = (count) => {
+    return count === 1 ? `1 ${t("personalInfo.labels.año") || "año"}` : `${count} ${t("personalInfo.labels.años") || "años"}`;
   };
 
   return {
@@ -76,7 +80,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            5 años
+            {yearsLabel(5)}
           </VuiTypography>
         ),
         nivel: (
@@ -111,7 +115,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -146,7 +150,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -181,7 +185,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -216,7 +220,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -251,7 +255,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -286,7 +290,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -321,7 +325,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -356,7 +360,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            5 años
+            {yearsLabel(5)}
           </VuiTypography>
         ),
         nivel: (
@@ -391,7 +395,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            5 años
+            {yearsLabel(5)}
           </VuiTypography>
         ),
         nivel: (
@@ -426,7 +430,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            2 años
+            {yearsLabel(2)}
           </VuiTypography>
         ),
         nivel: (
@@ -461,7 +465,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -496,7 +500,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -531,7 +535,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -566,7 +570,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -601,7 +605,42 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
+          </VuiTypography>
+        ),
+        nivel: (
+          <VuiBox display="flex" alignItems="center" gap={1}>
+            <Rating
+              value={getStarsFromPercentage(80)}
+              readOnly
+              precision={0.5}
+              sx={{
+                "& .MuiRating-iconFilled": {
+                  color: "#238680",
+                },
+                "& .MuiRating-iconEmpty": {
+                  color: "#444",
+                },
+              }}
+            />
+            <VuiTypography variant="caption" color="white" fontWeight="medium">
+              {getSkillLevelText(getStarsFromPercentage(80))}
+            </VuiTypography>
+          </VuiBox>
+        ),
+      },
+      {
+        tecnologias: (
+          <VuiBox display="flex" alignItems="center">
+            <SiApachekafka size="20px" color="#fff" />
+            <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+              Kafka
+            </VuiTypography>
+          </VuiBox>
+        ),
+        años: (
+          <VuiTypography variant="button" color="white" fontWeight="bold">
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -636,7 +675,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -671,7 +710,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -706,7 +745,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -741,7 +780,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -776,7 +815,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -811,7 +850,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            2 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -846,7 +885,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            2 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -881,7 +920,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -916,7 +955,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -951,7 +990,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -986,7 +1025,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1021,7 +1060,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1056,7 +1095,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1091,7 +1130,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1126,7 +1165,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1161,7 +1200,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1188,7 +1227,7 @@ export default function data() {
       {
         tecnologias: (
           <VuiBox display="flex" alignItems="center">
-            <React size="20px" />
+            <ReactIcon size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               React
             </VuiTypography>
@@ -1196,7 +1235,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            1 año
+            {yearsLabel(1)}
           </VuiTypography>
         ),
         nivel: (
@@ -1231,7 +1270,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1266,7 +1305,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1301,7 +1340,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1336,7 +1375,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (
@@ -1371,7 +1410,7 @@ export default function data() {
         ),
         años: (
           <VuiTypography variant="button" color="white" fontWeight="bold">
-            4 años
+            {yearsLabel(4)}
           </VuiTypography>
         ),
         nivel: (

@@ -1,8 +1,34 @@
-:root{
-  --c1:#103633; /* fondo profundo */
-  --c2:#105656; /* fondo elevado */
-  --c3:#238680; /* primario */
-  --c4:#3dc4ba; /* secundario */
-  --c5:#69fff8; /* acento */
-  --c6:#000000; /* negro */
+:root {
+  --c1: #103633;
+  --c2: #105656;
+  --c3: #238680;
+  --c4: #3dc4ba;
+  --c5: #69fff8;
+  --c6: #000000;
+}
+
+#page-wrapper.light-mode-filter {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#page-wrapper.light-mode-filter img,
+#page-wrapper.light-mode-filter video,
+#page-wrapper.light-mode-filter .MuiAvatar-root,
+#page-wrapper.light-mode-filter .MuiAvatar-img,
+#page-wrapper.light-mode-filter [style*="background-image"],
+#page-wrapper.light-mode-filter .project-logo-container {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#page-wrapper.light-mode-filter .welcome-text-overlay {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+#page-wrapper.light-mode-filter .welcome-text-overlay * {
+  color: white !important;
+}
+
+#page-wrapper.light-mode-filter .project-logo-container {
+  background-color: #000000 !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }

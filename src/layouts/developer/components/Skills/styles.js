@@ -1,22 +1,6 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// Projects component layout styles
 const projectsCard = {
   height: "500px",
   display: "flex",
@@ -32,7 +16,7 @@ const skillFilterInput = {
   width: '180px',
   "& .MuiOutlinedInput-root": {
     backgroundColor: "#ffffffff !important",
-    color: "white !important",
+    color: "#1e293b !important",
     "& fieldset": {
       borderColor: "#238680 !important",
     },
@@ -56,7 +40,7 @@ const levelFilterInput = {
   width: '180px',
   "& .MuiOutlinedInput-root": {
     backgroundColor: "#fbfbfbff !important",
-    color: "white !important",
+    color: "#1e293b !important",
     "& fieldset": {
       borderColor: "#238680 !important",
     },
@@ -95,11 +79,11 @@ const paginationContainer = {
   py: 2,
 };
 
-export { 
-  projectsCard, 
-  filtersContainer, 
-  skillFilterInput, 
-  levelFilterInput, 
-  tableContainer, 
-  paginationContainer 
+export {
+  projectsCard,
+  filtersContainer,
+  skillFilterInput,
+  levelFilterInput,
+  tableContainer,
+  paginationContainer
 };

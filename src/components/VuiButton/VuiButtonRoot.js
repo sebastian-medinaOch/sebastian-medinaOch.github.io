@@ -1,22 +1,6 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
 
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
-// @mui material components
 import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import linearGradient from "assets/theme/functions/linearGradient";
@@ -29,20 +13,20 @@ export default styled(Button)(({ theme, ownerState }) => {
   const { boxShadow, pxToRem, rgba, linearGradient } = functions;
   const { borderRadius } = borders;
 
-  // styles for the button with variant="contained"
+  
   const containedStyles = () => {
-    // background color value
+    
     const backgroundValue = palette[color] ? palette[color].main : white.main;
 
-    // backgroundColor value when button is focused
+    
     const focusedBackgroundValue = palette[color] ? palette[color].focus : white.focus;
 
-    // boxShadow value
+    
     const boxShadowValue = palette[color]
       ? boxShadow([0, 0], [0, 3.2], palette[color].main, 0.5)
       : boxShadow([0, 0], [0, 3.2], dark.main, 0.5);
 
-    // color value
+    
     let colorValue = white.main;
 
     if (color === "white" || !palette[color]) {
@@ -51,7 +35,7 @@ export default styled(Button)(({ theme, ownerState }) => {
       colorValue = gradients.dark.state;
     }
 
-    // color value when button is focused
+    
     let focusedColorValue = white.main;
 
     if (color === "white") {
@@ -80,20 +64,20 @@ export default styled(Button)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the button with variant="outlined"
+  
   const outliedStyles = () => {
-    // background color value
+    
     const backgroundValue = color === "white" ? transparent.main : transparent.main;
 
-    // color value
+    
     const colorValue = palette[color] ? palette[color].main : white.main;
 
-    // boxShadow value
+    
     const boxShadowValue = palette[color]
       ? boxShadow([0, 0], [0, 3.2], palette[color].main, 0.5)
       : boxShadow([0, 0], [0, 3.2], white.main, 0.5);
 
-    // border color value
+    
     let borderColorValue = palette[color] ? palette[color].main : rgba(white.main, 0.75);
 
     if (color === "white") {
@@ -128,17 +112,17 @@ export default styled(Button)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the button with variant="gradient"
+  
   const gradientStyles = () => {
-    // background value
+    
     const backgroundValue = linearGradient(
       palette.gradients[color].main,
       palette.gradients[color].state,
       palette.gradients[color].deg
     );
-    // "linear-gradient(126.97deg, rgba(222, 11, 40, 0.74) 28.26%, rgba(10, 14, 35, 0.71) 91.2%)";
+    
 
-    // color value
+    
     let colorValue = white.main;
 
     if (color === "white") {
@@ -164,12 +148,12 @@ export default styled(Button)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the button with variant="text"
+  
   const textStyles = () => {
-    // color value
+    
     const colorValue = palette[color] ? palette[color].main : white.main;
 
-    // color value when button is focused
+    
     const focusedColorValue = palette[color] ? palette[color].focus : palette[color].focus;
 
     return {
@@ -185,14 +169,14 @@ export default styled(Button)(({ theme, ownerState }) => {
     };
   };
 
-  // styles for the button with circular={true}
+  
   const circularStyles = () => ({
     borderRadius: borderRadius.section,
   });
 
-  // styles for the button with iconOnly={true}
+  
   const iconOnlyStyles = () => {
-    // width, height, minWidth and minHeight values
+    
     let sizeValue = pxToRem(38);
 
     if (size === "small") {
@@ -201,7 +185,7 @@ export default styled(Button)(({ theme, ownerState }) => {
       sizeValue = pxToRem(52);
     }
 
-    // padding value
+    
     let paddingValue = `${pxToRem(11)} ${pxToRem(11)} ${pxToRem(10)}`;
 
     if (size === "small") {

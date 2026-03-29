@@ -1,41 +1,25 @@
-/*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 
 import { useMemo } from "react";
 
-// prop-types is a library for typechecking of props
+
 import PropTypes from "prop-types";
 
-// uuid is a library for generating unique id
+
 import { v4 as uuidv4 } from "uuid";
 
-// @mui material components
+
 import { Table as MuiTable } from "@mui/material";
 import TableBody from "@mui/material/TableBody";
 import TableContainer from "@mui/material/TableContainer";
 import TableRow from "@mui/material/TableRow";
 
-// Vision UI Dashboard React components
+
 import VuiBox from "components/VuiBox";
 import VuiAvatar from "components/VuiAvatar";
 import VuiTypography from "components/VuiTypography";
 
-// Vision UI Dashboard React base styles
+
 import colors from "assets/theme/base/colors";
 import typography from "assets/theme/base/typography";
 import borders from "assets/theme/base/borders";
@@ -152,13 +136,13 @@ function Table({ columns, rows }) {
   );
 }
 
-// Setting default values for the props of Table
+
 Table.defaultProps = {
   columns: [],
   rows: [{}],
 };
 
-// Typechecking props for the Table
+
 Table.propTypes = {
   columns: PropTypes.arrayOf(PropTypes.object),
   rows: PropTypes.arrayOf(PropTypes.object),
