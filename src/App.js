@@ -84,7 +84,7 @@ export default function App() {
             <Redirect from="*" to="/developer" />
           </Switch>
         </div>
-        <FloatingMenu onToggleTheme={handleToggleTheme} isLight={isLight} />
+        {!pathname.startsWith('/blog') && <FloatingMenu onToggleTheme={handleToggleTheme} isLight={isLight} />}
       </ThemeProvider>
     </CacheProvider>
   ) : (
@@ -96,7 +96,7 @@ export default function App() {
           <Redirect from="*" to="/developer" />
         </Switch>
       </div>
-      <FloatingMenu onToggleTheme={handleToggleTheme} isLight={isLight} />
+      {!pathname.startsWith('/blog') && <FloatingMenu onToggleTheme={handleToggleTheme} isLight={isLight} />}
     </ThemeProvider>
   );
 }
