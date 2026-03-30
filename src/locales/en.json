@@ -122,5 +122,16 @@
         "desc": "Developed interbank payment services using Java and Spring Boot. Deployment and orchestration were managed on the AWS cloud and Azure DevOps."
       }
     }
+  },
+  "blog": {
+    "goToBlog": "Go to Blog",
+    "backToProfile": "Back to Developer Profile",
+    "title": "Stellar Log",
+    "subtitle": "Knowledge and development records",
+    "readMore": "Read more",
+    "publishedOn": "Published on",
+    "topic": "Topic",
+    "watchVideo": "Watch broadcast",
+    "socialShare": "See on network"
   }
 }

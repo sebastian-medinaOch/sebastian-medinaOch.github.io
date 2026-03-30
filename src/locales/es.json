@@ -122,5 +122,16 @@
         "desc": "Desarrollé servicios de pagos interbancarios utilizando Java y Spring Boot. El despliegue y la orquestación se gestionaron en la nube de AWS y Azure DevOps."
       }
     }
+  },
+  "blog": {
+    "goToBlog": "Ir al Blog",
+    "backToProfile": "Volver al Perfil Developer",
+    "title": "BITÁCORA",
+    "subtitle": "Publicaciones y novedades.",
+    "readMore": "Leer completo",
+    "publishedOn": "Publicado el",
+    "topic": "Tema",
+    "watchVideo": "Ver transmisión",
+    "socialShare": "Ver en la red"
   }
 }
