@@ -133,12 +133,12 @@ const neonPulse = keyframes`
 
 const CyberCard = styled(VuiBox)`
   position: relative;
-  background: rgba(0, 0, 0, 0.87);
-  border: 1px solid rgba(0, 114, 255, 0.35);
+  background: linear-gradient(127.09deg, #000000 19.41%, #000000 76.65%);
+  border: 1px solid #56577a;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(0, 195, 255, 0.05);
-  transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   z-index: 1;
   padding: 24px;
   margin-bottom: 32px;
@@ -147,7 +147,7 @@ const CyberCard = styled(VuiBox)`
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(0, 195, 255, 0.04) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 60%);
     z-index: 0;
     pointer-events: none;
   }
@@ -159,20 +159,18 @@ const CyberCard = styled(VuiBox)`
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, transparent, rgba(0, 195, 255, 0.12), transparent);
-    animation: ${scanline} 7s linear infinite;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.03), transparent);
+    animation: ${scanline} 9s linear infinite;
     z-index: 0;
     pointer-events: none;
   }
 
   &:hover {
-    transform: translateY(-8px);
-    background: rgba(0, 0, 0, 0.92);
-    border-color: rgba(0, 195, 255, 0.85);
+    transform: translateY(-6px);
+    border-color: rgba(226, 232, 240, 0.4);
     box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.7),
-      0 0 25px rgba(0, 195, 255, 0.35),
-      0 0 60px rgba(0, 114, 255, 0.15) inset;
+      0 10px 30px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(226, 232, 240, 0.1) inset;
 
     .cyber-title {
       animation: ${neonPulse} 2s ease-in-out infinite;
@@ -185,15 +183,14 @@ const CyberImage = styled("img")`
   width: 100%;
   border-radius: 12px;
   object-fit: cover;
-  max-height: 400px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 380px;
+  border: 1px solid rgba(226, 232, 240, 0.15);
   margin-bottom: 16px;
-  filter: sepia(10%) hue-rotate(180deg) brightness(85%) contrast(120%);
   transition: all 0.3s ease;
 
   &:hover {
-    filter: sepia(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.4);
+    border-color: rgba(226, 232, 240, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   }
 `;
 

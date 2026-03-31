@@ -23,11 +23,11 @@ const GlitchButton = styled(VuiBox)`
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  padding: 10px 20px;
-  background: rgba(0, 114, 255, 0.1);
-  border: 1px solid rgba(0, 195, 255, 0.5);
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 1);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
   border-radius: 8px;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   position: relative;
   overflow: hidden;
 
@@ -36,15 +36,15 @@ const GlitchButton = styled(VuiBox)`
     position: absolute;
     top: 0; left: -100%;
     width: 100%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(0, 195, 255, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(1, 181, 116, 0.35), transparent);
     transition: all 0.5s ease;
   }
 
   &:hover {
-    background: rgba(0, 114, 255, 0.2);
-    box-shadow: 0 0 20px rgba(0, 195, 255, 0.4);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 18px rgba(1, 181, 116, 0.45), 0 0 6px rgba(1, 181, 116, 0.2) inset;
     transform: translateY(-2px);
-    
+
     &::before {
       left: 100%;
     }
@@ -58,20 +58,20 @@ function Header() {
   const [tabValue, setTabValue] = useState(0);
 
   useEffect(() => {
-    
+
     function handleTabsOrientation() {
       return window.innerWidth < breakpoints.values.lg
         ? setTabsOrientation("vertical")
         : setTabsOrientation("horizontal");
     }
 
-    
+
     window.addEventListener("resize", handleTabsOrientation);
 
-    
+
     handleTabsOrientation();
 
-    
+
     return () => window.removeEventListener("resize", handleTabsOrientation);
   }, [tabsOrientation]);
 
@@ -139,8 +139,8 @@ function Header() {
           </Grid>
           <Grid item xs={12} md={4} lg={4.5} xl={5} xxl={4} display="flex" justifyContent="flex-end" alignItems="center">
             <GlitchButton onClick={() => history.push("/blog")}>
-              <IoRocketSharp size="20px" color="#00c3ff" />
-              <VuiTypography variant="button" color="white" fontWeight="bold" sx={{ textTransform: "uppercase", letterSpacing: "1px" }}>
+              <IoRocketSharp size="20px" color="#000000ff" />
+              <VuiTypography variant="button" color="white" fontWeight="bold" sx={{ textTransform: "uppercase", letterSpacing: "1px", color: "#000000ff" }}>
                 {t("blog.goToBlog", "Ir al Blog")}
               </VuiTypography>
             </GlitchButton>
