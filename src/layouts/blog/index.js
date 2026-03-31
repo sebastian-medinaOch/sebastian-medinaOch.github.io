@@ -16,16 +16,31 @@ const GoBackButton = styled(VuiBox)`
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  padding: 8px 16px;
-  background: rgba(0, 114, 255, 0.1);
-  border: 1px solid rgba(0, 114, 255, 0.3);
-  border-radius: 20px;
-  transition: all 0.3s ease;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 1);
+  border: 1.5px solid rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(1, 181, 116, 0.35), transparent);
+    transition: all 0.5s ease;
+  }
 
   &:hover {
-    background: rgba(0, 114, 255, 0.2);
-    box-shadow: 0 0 15px rgba(0, 114, 255, 0.5);
-    transform: translateX(-4px);
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 18px rgba(1, 181, 116, 0.45), 0 0 6px rgba(1, 181, 116, 0.2) inset;
+    transform: translateY(-2px);
+
+    &::before {
+      left: 100%;
+    }
   }
 `;
 
@@ -44,17 +59,17 @@ function Blog() {
       );
     }
 
-    // Particles.js
+    // Particles.js — green matching developer page success color
     if (window.particlesJS) {
       window.particlesJS("particles-js", {
         particles: {
-          number: { value: 60, density: { enable: true, value_area: 800 } },
-          color: { value: "#00c3ff" },
+          number: { value: 50, density: { enable: true, value_area: 900 } },
+          color: { value: "#01B574" },
           shape: { type: "circle" },
-          opacity: { value: 0.5, random: true },
+          opacity: { value: 0.4, random: true },
           size: { value: 3, random: true },
-          line_linked: { enable: true, distance: 150, color: "#00c3ff", opacity: 0.2, width: 1 },
-          move: { enable: true, speed: 2, direction: "none", random: true, out_mode: "out" },
+          line_linked: { enable: true, distance: 150, color: "#01B574", opacity: 0.15, width: 1 },
+          move: { enable: true, speed: 1.5, direction: "none", random: true, out_mode: "out" },
         },
         interactivity: {
           detect_on: "window",
@@ -64,8 +79,8 @@ function Blog() {
             resize: true,
           },
           modes: {
-            grab: { distance: 140, line_linked: { opacity: 0.8 } },
-            push: { particles_nb: 3 },
+            grab: { distance: 130, line_linked: { opacity: 0.5 } },
+            push: { particles_nb: 2 },
           },
         },
         retina_detect: true,
@@ -117,8 +132,8 @@ function Blog() {
 
       <VuiBox mt={4} mb={3} position="relative" zIndex={1}>
         <GoBackButton onClick={() => history.push("/developer")} mb={4}>
-          <IoArrowBackCircle size="24px" color="#0072ff" />
-          <VuiTypography variant="button" color="white" fontWeight="medium">
+          <IoArrowBackCircle size="20px" color="#000000" />
+          <VuiTypography variant="button" fontWeight="bold" sx={{ textTransform: "uppercase", letterSpacing: "1px", color: "#000000" }}>
             {t("blog.backToProfile", "Volver al Perfil Developer")}
           </VuiTypography>
         </GoBackButton>
@@ -128,7 +143,7 @@ function Blog() {
             variant="h1"
             color="white"
             fontWeight="bold"
-            sx={{ textShadow: "0 0 10px rgba(0, 195, 255, 0.5)" }}
+            sx={{ textShadow: "none", letterSpacing: "2px" }}
           >
             {t("blog.title", "Bitácora")}
           </VuiTypography>
